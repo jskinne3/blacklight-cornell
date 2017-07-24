@@ -14,7 +14,7 @@ group :development,:test, :integration do
   gem 'sqlite3'
 end
 
-group :production do  
+group :production,:staging do  
   gem 'mysql'
 end
 
@@ -95,7 +95,6 @@ gem 'omniauth-saml'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'blacklight_cornell_requests',:git =>'https://github.com/cul-it/blacklight-cornell-requests', :branch => 'saml'
-#gem  'blacklight_cornell_requests',:path => '../blacklight-cornell-requests'
 gem 'borrow_direct', :git => 'https://github.com/jrochkind/borrow_direct'
 
 gem 'bento_search'

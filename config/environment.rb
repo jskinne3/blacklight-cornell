@@ -12,7 +12,7 @@ MARC::XMLReader.nokogiri!
 BlacklightCornellRequests::VoyagerRequest.use_rest(true)
 BlacklightCornellRequests.config do |config|
 #  # URL of service which returns JSON holding info.
-  config.voyager_holdings = "http://" + (ENV['VOYAGER_HOLDINGS_HOST']  ?
+  config.voyager_holdings = "https://" + (ENV['VOYAGER_HOLDINGS_HOST']  ?
                    ENV['VOYAGER_HOLDINGS_HOST']  :
                    ENV['HOLDINGSHOST'])
   config.voyager_get_holds = ENV['VXWS_URL'] +"/GetHoldingsService"

@@ -121,9 +121,9 @@ Feature: Search
     Then I should get results
     And I should see the "fa-clock-o" class
 
- @all_search
-   @utf8
-   @javascript
+  @all_search
+  @utf8
+  @javascript
   Scenario: Perform a search and see linked fields displayed
     Given I am on the home page
     And I select 'Title' from the 'search_field' drop-down

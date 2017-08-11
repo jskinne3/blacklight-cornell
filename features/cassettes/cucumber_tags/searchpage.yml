@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://holdings6.library.cornell.edu/holdings/retrieve_detail_short/1807908/826023/230451/4391372?Accept-Encoding=gzip,%20deflate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      Accept:
+      - "*/*"
+      Date:
+      - Fri, 11 Aug 2017 15:19:06 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Aug 2017 15:19:06 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"09fb0dd5754e7bce758445315fe2fcde"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3cb6cbc061cc93e9748c5898a29da5c5
+      X-Runtime:
+      - '10.229936'
+      X-Powered-By:
+      - Phusion Passenger 4.0.58
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"1807908":{"1807908":{"records":[{"bibid":"1807908","holding_id":"2212055","location_name":"engr,anx","call_number":"QA76.6
+        .C85 1972","shelving_title":"","summary_holdings":[],"supplements":[],"indexes":[],"notes":[],"reproduction_note":"","urls":[],"item_count":1,"temp_locations":[],"item_status":{},"services":[],"current_issues":[],"orders":[],"onotes":[]}],"summary":{"holdinglocs":["Library
+        Annex"],"locnumber":1,"status":["avail"],"avail_at":{"Library Annex":"QA76.6
+        .C85 1972"},"not_avail_at":{},"onotes":[]}}},"826023":{"826023":{"records":[{"bibid":"826023","holding_id":"1006663","location_name":"math","call_number":"QA164
+        .H87","shelving_title":"","summary_holdings":[],"supplements":[],"indexes":[],"notes":[],"reproduction_note":"","urls":[],"item_count":1,"temp_locations":[],"item_status":{},"services":[],"current_issues":[],"orders":[],"onotes":[]}],"summary":{"holdinglocs":["Mathematics
+        Library (Malott Hall)"],"locnumber":1,"status":["avail"],"avail_at":{"Mathematics
+        Library (Malott Hall)":"QA164 .H87"},"not_avail_at":{},"onotes":[]}}},"230451":{"230451":{"records":[{"bibid":"230451","holding_id":"284412","location_name":"engr,anx","call_number":"QA164
+        .R36","shelving_title":"","summary_holdings":[],"supplements":[],"indexes":[],"notes":[],"reproduction_note":"","urls":[],"item_count":1,"temp_locations":[],"item_status":{},"services":[],"current_issues":[],"orders":[],"onotes":[]}],"summary":{"holdinglocs":["Library
+        Annex"],"locnumber":1,"status":["avail"],"avail_at":{"Library Annex":"QA164
+        .R36"},"not_avail_at":{},"onotes":[]}}},"4391372":{"4391372":{"records":[{"bibid":"4391372","holding_id":"4928656","location_name":"math","call_number":"QA164
+        .H8x 2002","shelving_title":"","summary_holdings":[],"supplements":[],"indexes":[],"notes":[],"reproduction_note":"","urls":[],"item_count":1,"temp_locations":[],"item_status":{},"services":[],"current_issues":[],"orders":[],"onotes":[]}],"summary":{"holdinglocs":["Mathematics
+        Library (Malott Hall)"],"locnumber":1,"status":["avail"],"avail_at":{"Mathematics
+        Library (Malott Hall)":"QA164 .H8x 2002"},"not_avail_at":{},"onotes":[]}}}}'
+    http_version: 
+  recorded_at: Fri, 11 Aug 2017 15:19:16 GMT
+- request:
+    method: get
+    uri: http://da-prod-solr.library.cornell.edu/solr/b7/select?defType=edismax&f.author_facet.facet.limit=6&f.fast_era_facet.facet.limit=6&f.fast_genre_facet.facet.limit=6&f.fast_geo_facet.facet.limit=6&f.fast_topic_facet.facet.limit=6&f.format.facet.limit=11&f.language_facet.facet.limit=6&f.lc_alpha_facet.facet.limit=6&f.lc_callnum_facet.facet.limit=-1&f.lc_callnum_facet.facet.sort=index&f.location_facet.facet.limit=6&f.online.facet.limit=3&f.subject_content_facet.facet.limit=6&facet=true&facet.query=pub_date_facet:%5B2015%20TO%202016%5D&mm=1&q=(%20(%2Btitle:combinatorial%20%2Btitle:algorithms)%20OR%20title_phrase:%22combinatorial%20algorithms%22)%20NOT%20((%2Bspringer)%20OR%20phrase:%22springer%22)&qt=search&rows=0&search_field=advanced&sort=score%20desc,%20pub_date_sort%20desc,%20title_sort%20asc&spellcheck.maxResultsForSuggest=1&spellcheck.q=combinatorial%20algorithms%20springer%20&wt=ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Aug 2017 15:20:59 GMT
+      Last-Modified:
+      - Fri, 11 Aug 2017 15:20:45 GMT
+      Etag:
+      - '"MTU5YjAwMDAwMDAwMDAwMFNvbHI="'
+      Content-Type:
+      - text/plain;charset=utf-8
+      Content-Length:
+      - '2125'
+      Via:
+      - 1.1 da-prod-solr8.library.cornell.edu
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{''responseHeader''=>{''zkConnected''=>true,''status''=>0,''QTime''=>4194,''params''=>{''f.subject_content_facet.facet.limit''=>''6'',''f.location_facet.facet.limit''=>''6'',''f.fast_geo_facet.facet.limit''=>''6'',''f.lc_alpha_facet.facet.limit''=>''6'',''f.online.facet.limit''=>''3'',''facet.query''=>[''pub_date_facet:[1973
+        TO 1974]'',''pub_date_facet:[1975 TO 1979]'',''pub_date_facet:[1980 TO 1984]'',''pub_date_facet:[1985
+        TO 1989]'',''pub_date_facet:[1990 TO 1994]'',''pub_date_facet:[1995 TO 1999]'',''pub_date_facet:[2000
+        TO 2004]'',''pub_date_facet:[2005 TO 2009]'',''pub_date_facet:[2010 TO 2014]'',''pub_date_facet:[2015
+        TO 2016]''],''defType''=>''edismax'',''spellcheck.maxResultsForSuggest''=>''1'',''spellcheck.q''=>''combinatorial
+        algorithms springer '',''f.lc_callnum_facet.facet.sort''=>''index'',''wt''=>''ruby'',''f.fast_genre_facet.facet.limit''=>''6'',''f.format.facet.limit''=>''11'',''mm''=>''1'',''f.author_facet.facet.limit''=>''6'',''qt''=>''search'',''f.lc_callnum_facet.facet.limit''=>''-1'',''sort''=>''score
+        desc, pub_date_sort desc, title_sort asc'',''rows''=>''0'',''q''=>''( (+title:combinatorial
+        +title:algorithms) OR title_phrase:"combinatorial algorithms") NOT ((+springer)
+        OR phrase:"springer")'',''f.fast_era_facet.facet.limit''=>''6'',''f.fast_topic_facet.facet.limit''=>''6'',''facet''=>''true'',''f.language_facet.facet.limit''=>''6'',''search_field''=>''advanced''}},''response''=>{''numFound''=>43,''start''=>0,''maxScore''=>198651.5,''docs''=>[]},''facet_counts''=>{''facet_queries''=>{''pub_date_facet:[1973
+        TO 1974]''=>2,''pub_date_facet:[1975 TO 1979]''=>5,''pub_date_facet:[1980
+        TO 1984]''=>2,''pub_date_facet:[1985 TO 1989]''=>9,''pub_date_facet:[1990
+        TO 1994]''=>2,''pub_date_facet:[1995 TO 1999]''=>5,''pub_date_facet:[2000
+        TO 2004]''=>3,''pub_date_facet:[2005 TO 2009]''=>6,''pub_date_facet:[2010
+        TO 2014]''=>6,''pub_date_facet:[2015 TO 2016]''=>3},''facet_fields''=>{''format''=>[''Book'',42,''Thesis'',3],''online''=>[''At
+        the Library'',25,''Online'',19],''language_facet''=>[''English'',42],''location_facet''=>[''Mathematics
+        Library'',19,''Library Annex'',6,''Kroch Library Rare & Manuscripts'',3,''Mann
+        Library'',1,''Uris Library'',1]},''facet_ranges''=>{},''facet_intervals''=>{},''facet_heatmaps''=>{}},''spellcheck''=>{''suggestions''=>[],''correctlySpelled''=>true}}
+
+'
+    http_version: 
+  recorded_at: Fri, 11 Aug 2017 15:21:03 GMT
+recorded_with: VCR 3.0.3

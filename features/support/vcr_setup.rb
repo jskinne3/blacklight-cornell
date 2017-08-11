@@ -25,29 +25,33 @@ VCR.configure do |c|
   c.ignore_localhost = true
   c.default_cassette_options = { :record => :new_episodes, :erb => true }
 end
+#  @adv_search @all_search @searchpage @javascript
+#  @adv_search @all_search @searchpage @javascript
 if use_mock_and_vcr
 then
   VCR.cucumber_tags do |t|
+    t.tag  '@adv_search'
     t.tag  '@all'
+    t.tag  '@all_item_view'
+    t.tag  '@all_results_list'
+    t.tag  '@all_search'
+    t.tag  '@all_select_and_export'
+    t.tag  '@availability'
+    t.tag  '@begins_with'
+    t.tag  '@browse'
     t.tag  '@citations'
     t.tag  '@databases'
     t.tag  '@digitalcollections'
-    t.tag  '@browse'
-    t.tag  '@tou'
-    t.tag  '@linkfields'
-    t.tag  '@begins_with'
-    t.tag  '@all_select_and_export'
-    t.tag  '@all_search'
-    t.tag  '@all_results_list'
-    t.tag  '@all_item_view'
-    t.tag  '@javascript'
-    t.tag  '@homepage'
-    t.tag  '@holdings'
     t.tag  '@DISCOVERYACCESS-137'
     t.tag  '@DISCOVERYACCESS-1430'
-    t.tag  '@availability'
+    t.tag  '@holdings'
+    t.tag  '@homepage'
+    t.tag  '@javascript'
+    t.tag  '@linkfields'
     t.tag  '@missing'
-    t.tag  '@search_availability_title_mission_etrangeres_missing'
+    t.tag  '@searchpage'
     t.tag  '@search_availability_annotated_hobbit'
+    t.tag  '@search_availability_title_mission_etrangeres_missing'
+    t.tag  '@tou'
   end
 end

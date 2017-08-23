@@ -29,6 +29,12 @@ Feature: Item view
         #And click on link "Request for Reading Room Delivery"
         Then it should have link "Request item for Reading Room Delivery" with value "http://www.library.cornell.edu/aeon/monograph.php?bibid=2083253&libid=rmc,anx&finding="
   @all_item_view
+  @mannspec
+  Scenario: View an items holdings, and request from mann spec 
+    Given I request the item view for 283919 
+    Then I should see the label 'Request item for Mann'
+    #    Then it should have link "Request item for Reading Room Delivery" with value "http://www.library.cornell.edu/aeon/monograph.php?bibid=2083253&libid=rmc,anx&finding="
+  @all_item_view
   @aeon
   #Scenario: View an items holdings, and request from aeon
   #  Given I request the item view for 2083253

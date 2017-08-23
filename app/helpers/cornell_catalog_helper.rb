@@ -1,4 +1,3 @@
-# froozen_string_literal: true
 module CornellCatalogHelper
  require "pp"
  require "maybe"
@@ -26,10 +25,14 @@ module CornellCatalogHelper
       grouped['Circulating'] = [] if grouped['Circulating'].nil?
       grouped['*Online'] = [] if grouped ['*Online'].nil?
       grouped['Rare'] = [] if grouped['Rare'].nil?
+      grouped['SPECM'] = [] if grouped['SPECM'].nil?
       #if holding['location_code'].include?('rmc')
       ##Rails.logger.debug "\nes287_debug file:#{__FILE__} line:#{__LINE__}  holding = #{holding.pretty_inspect}"
       if Location::aeon_eligible? holding['location_code']
         grouped['Rare'] << holding
+      elsif mann_spec_eligible? holding['location_code']
+      Rails.logger.debug "\nes287_debug file:#{__FILE__} line:#{__LINE__}  mann spec holding = #{holding.pretty_inspect}"
+        grouped['SPECM'] << holding
       elsif holding['location_name'].include?('*Networked Resource')
         grouped['*Online'] << holding
       else
@@ -96,8 +99,13 @@ module CornellCatalogHelper
     'hote,rare'
   ]
 
-  def xx_aeon_eligible?(lib)
-    return AEON_SITES.include?(lib)
+
+  MANN_SPEC_SITES  = [
+    'mann,spec' 
+]
+
+  def mann_spec_eligible?(lib)
+    return MANN_SPEC_SITES.include?(lib)
   end
 
   # Using data from solr, and from oracle -- create the condensed_full structure
@@ -1405,6 +1413,8 @@ module CornellCatalogHelper
 # (group == "Circulating" ) ? blacklight_cornell_request.magic_request_path("#{id}") :  "http://wwwdev.library.cornell.edu/aeon/monograph.php?bibid=#{id}&libid=#{aeon_codes.join('|')}"
   def request_path(group,id,aeon_codes,document)
    
+    mann_spec_req = ENV['MANN_SPEC_REQUEST'].blank? ? '/mannsp/~id~' : ENV['MANN_SPEC_REQUEST'] 
+    mann_req  = mann_spec_req.sub('~id~',id.to_s)
     if ENV['AEON_REQUEST'].blank?
       aeon_req = '/aeon/~id~' 
       aeon_req = aeon_req.sub!('~id~',id.to_s)
@@ -1418,7 +1428,15 @@ module CornellCatalogHelper
       ##Rails.logger.info("es287_debug@@ #{__FILE__} #{__LINE__}  = #{finding_a.inspect}")
     end
     aeon_req = aeon_req.gsub('~fa~',"#{finding_a}")
-    (group == "Circulating" ) ? blacklight_cornell_request.magic_request_path("#{id}") : aeon_req
+    if (group == "Circulating" ) 
+     blacklight_cornell_request.magic_request_path("#{id}") 
+    elsif (group == 'Rare') 
+      aeon_req
+    elsif (group == 'SPECM') 
+      mann_req
+    else
+      aeon_req
+    end
   end
     
   def has_tou?(id)

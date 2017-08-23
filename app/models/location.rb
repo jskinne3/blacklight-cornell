@@ -30,4 +30,19 @@ class Location < ActiveRecord::Base
     code.delete!(' ')
     return where("code = ?", code).rmc_aeon 
   end
+
+  MANN_SPEC_SITES  = [
+    'mann,href',
+    'mann,spec'
+  ]
+
+  def self.mann_spec_eligible?(code)
+    ret = false 
+    code.delete!(' ')
+    return MANN_SPEC_SITES.include?(code)
+    #later ?
+    #rec = where("code = ?", code).rst
+    #rec ?  rec.mann_spec : ret
+  end
+
 end

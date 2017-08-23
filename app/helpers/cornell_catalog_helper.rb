@@ -26,12 +26,15 @@ module CornellCatalogHelper
       grouped['*Online'] = [] if grouped ['*Online'].nil?
       grouped['Rare'] = [] if grouped['Rare'].nil?
       grouped['SPECM'] = [] if grouped['SPECM'].nil?
-      #if holding['location_code'].include?('rmc')
-      ##Rails.logger.debug "\nes287_debug file:#{__FILE__} line:#{__LINE__}  holding = #{holding.pretty_inspect}"
-      if Location::aeon_eligible? holding['location_code']
-        grouped['Rare'] << holding
-      elsif mann_spec_eligible? holding['location_code']
       Rails.logger.debug "\nes287_debug file:#{__FILE__} line:#{__LINE__}  mann spec holding = #{holding.pretty_inspect}"
+      mann_override =  holding['location_code']
+      mann_notes=(!holding['notes'].nil? )? holding['notes'] : ''
+      mann_override=mann_notes.include?('Shelved in Mann Library Special')?'mann,spec' : mann_override 
+      Rails.logger.debug "\nes287_debug file:#{__FILE__} line:#{__LINE__}  loc overrid = #{mann_override.inspect}"
+      if Location::aeon_eligible? holding['location_code'] 
+        grouped['Rare'] << holding
+      elsif Location::mann_spec_eligible? mann_override 
+        Rails.logger.debug "\nes287_debug file:#{__FILE__} line:#{__LINE__}  mann spec holding = #{holding.inspect}"
         grouped['SPECM'] << holding
       elsif holding['location_name'].include?('*Networked Resource')
         grouped['*Online'] << holding
@@ -100,13 +103,7 @@ module CornellCatalogHelper
   ]
 
 
-  MANN_SPEC_SITES  = [
-    'mann,spec' 
-]
 
-  def mann_spec_eligible?(lib)
-    return MANN_SPEC_SITES.include?(lib)
-  end
 
   # Using data from solr, and from oracle -- create the condensed_full structure
   # needed by the display logic.

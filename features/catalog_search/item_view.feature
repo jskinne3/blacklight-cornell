@@ -28,12 +28,35 @@ Feature: Item view
     Given I request the item view for 2083253
         #And click on link "Request for Reading Room Delivery"
         Then it should have link "Request item for Reading Room Delivery" with value "http://www.library.cornell.edu/aeon/monograph.php?bibid=2083253&libid=rmc,anx&finding="
+
+  #location mann,spec
   @all_item_view
   @mannspec
   Scenario: View an items holdings, and request from mann spec 
     Given I request the item view for 283919 
     Then I should see the label 'Request item for Mann'
-    #    Then it should have link "Request item for Reading Room Delivery" with value "http://www.library.cornell.edu/aeon/monograph.php?bibid=2083253&libid=rmc,anx&finding="
+
+  #location mann,href
+  @all_item_view
+  @mannspec
+  Scenario: View an items holdings, and request from mann spec 
+    Given I request the item view for 968875 
+    Then I should see the label 'Request item for Mann'
+
+  #location mann,hort -- with note Shelved in Mann
+  @all_item_view
+  @mannspec
+  Scenario: View an items holdings, and request from mann spec 
+    Given I request the item view for 1894954 
+    Then I should see the label 'Request item for Mann'
+
+  #location mann,hort -- without  note Shelved in Mann
+  @all_item_view
+  @mannspec
+  Scenario: View an items holdings, and request from mann spec 
+    Given I request the item view for 884996 
+    Then I should not see the label 'Request item for Mann'
+
   @all_item_view
   @aeon
   #Scenario: View an items holdings, and request from aeon

@@ -1408,8 +1408,21 @@ module CornellCatalogHelper
   end
 
 # (group == "Circulating" ) ? blacklight_cornell_request.magic_request_path("#{id}") :  "http://wwwdev.library.cornell.edu/aeon/monograph.php?bibid=#{id}&libid=#{aeon_codes.join('|')}"
+# +        <% if location =~ /Mann Library Special/ %>
+# +          <% reading = ' for Mann Reading Room Delivery' %>
+# +          <% noncirc = true  %>
+# +        <% end %>
+# +        <% if location =~ /Bailey Hortorium Reference/ %>
+# +          <% reading = ' for Mann Reading Room Delivery' %>
+# +          <% noncirc = true  %>
+# +        <% end %>
+#          <% if location =~ /Rare/ %>
+#                     <% reading = ' for Reading Room Delivery' %>
+#
   def request_path(group,id,aeon_codes,document)
-   
+    reading = '' 
+    aeon_reading = ' for Reading Room Delivery' 
+    mann_reading = ' for Mann Reading Room Delivery' 
     mann_spec_req = ENV['MANN_SPEC_REQUEST'].blank? ? '/mannsp/~id~' : ENV['MANN_SPEC_REQUEST'] 
     mann_req  = mann_spec_req.sub('~id~',id.to_s)
     if ENV['AEON_REQUEST'].blank?
@@ -1426,13 +1439,13 @@ module CornellCatalogHelper
     end
     aeon_req = aeon_req.gsub('~fa~',"#{finding_a}")
     if (group == "Circulating" ) 
-     blacklight_cornell_request.magic_request_path("#{id}") 
+     [reading,blacklight_cornell_request.magic_request_path("#{id}") ]
     elsif (group == 'Rare') 
-      aeon_req
+     [ aeon_reading, aeon_req]
     elsif (group == 'SPECM') 
-      mann_req
+     [ mann_reading,mann_req]
     else
-      aeon_req
+     [ aeon_reading, aeon_req]
     end
   end
     

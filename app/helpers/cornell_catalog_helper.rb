@@ -1421,8 +1421,10 @@ module CornellCatalogHelper
 #
   def request_path(group,id,aeon_codes,document)
     reading = '' 
-    aeon_reading = ' for Reading Room Delivery' 
-    mann_reading = ' for Mann Reading Room Delivery' 
+    #aeon_reading = ' for Reading Room Delivery' 
+    aeon_reading = ' ' + t('blacklight.catalog.aeon_req_label')
+    #mann_reading = ' for Mann Reading Room Delivery' 
+    mann_reading = ' ' + t('blacklight.catalog.mann_req_label')
     mann_spec_req = ENV['MANN_SPEC_REQUEST'].blank? ? '/mannsp/~id~' : ENV['MANN_SPEC_REQUEST'] 
     mann_req  = mann_spec_req.sub('~id~',id.to_s)
     if ENV['AEON_REQUEST'].blank?

@@ -173,6 +173,8 @@ en:
         on_order: "On order"
         on_site: "On-site use"
         bound_with_status_label: "Bound with:"
+        aeon_req_label: 'for Reading Room Delivery'
+        mann_req_label: 'for Mann Reading Room Delivery'
     url:
         message: "Available online"
     holdings:

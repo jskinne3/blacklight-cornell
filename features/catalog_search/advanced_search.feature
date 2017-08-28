@@ -97,6 +97,7 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label '1 - 2'
+    And I sleep 8 seconds
 
 # @callnumber
 # @javascript
@@ -236,10 +237,10 @@ Feature: Search
     And I sleep 4 seconds
 
 #
+# @javascript
  @adv_search
  @all_search
  @adv_notes
- @javascript
   Scenario: Perform an advanced search by notes
     When I literally go to advanced
     And I sleep 4 seconds

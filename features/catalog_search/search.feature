@@ -132,6 +132,7 @@ Feature: Search
     Then I should get results
     And I should see the label 'Meiguo xue zhe lun Meiguo Zhongguo xue' 
     And I should see the label '美国学者论美国中国学' 
+    And I sleep 5 seconds
 
  @all_search
    @search_availability_title_professional_manager_multiple

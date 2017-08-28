@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://da-prod-solr.library.cornell.edu/solr/b7/select?defType=edismax&f.author_facet.facet.limit=6&f.fast_era_facet.facet.limit=6&f.fast_genre_facet.facet.limit=6&f.fast_geo_facet.facet.limit=6&f.fast_topic_facet.facet.limit=6&f.format.facet.limit=11&f.language_facet.facet.limit=6&f.lc_alpha_facet.facet.limit=6&f.lc_callnum_facet.facet.limit=-1&f.lc_callnum_facet.facet.sort=index&f.location_facet.facet.limit=6&f.online.facet.limit=3&f.subject_content_facet.facet.limit=6&facet=true&facet.query=pub_date_facet:%5B1870%20TO%201878%5D&mm=1&q=(%2Bauthor:Peabody,%20%2Bauthor:William%20%2Bauthor:Bourn%20%2Bauthor:Oliver,%20%2Bauthor:1799-1847%20)%20OR%20author:%22Peabody,%20William%20Bourn%20Oliver,%201799-1847%22&qt=search&rows=0&search_field=advanced&sort=score%20desc,%20pub_date_sort%20desc,%20title_sort%20asc&spellcheck.maxResultsForSuggest=1&wt=ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Aug 2017 21:16:42 GMT
+      Last-Modified:
+      - Fri, 25 Aug 2017 21:16:11 GMT
+      Etag:
+      - '"NjU5MmMwMDAwMDAwMDAwMFNvbHI="'
+      Content-Type:
+      - text/plain;charset=utf-8
+      Content-Length:
+      - '1688'
+      Via:
+      - 1.1 da-prod-solr8.library.cornell.edu
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{''responseHeader''=>{''zkConnected''=>true,''status''=>0,''QTime''=>1140,''params''=>{''f.subject_content_facet.facet.limit''=>''6'',''mm''=>''1'',''f.author_facet.facet.limit''=>''6'',''qt''=>''search'',''f.location_facet.facet.limit''=>''6'',''f.fast_geo_facet.facet.limit''=>''6'',''f.lc_alpha_facet.facet.limit''=>''6'',''f.lc_callnum_facet.facet.limit''=>''-1'',''sort''=>''score
+        desc, pub_date_sort desc, title_sort asc'',''rows''=>''0'',''f.online.facet.limit''=>''3'',''facet.query''=>[''pub_date_facet:[1828
+        TO 1829]'',''pub_date_facet:[1830 TO 1839]'',''pub_date_facet:[1840 TO 1849]'',''pub_date_facet:[1850
+        TO 1859]'',''pub_date_facet:[1860 TO 1869]'',''pub_date_facet:[1870 TO 1878]''],''q''=>''(+author:Peabody,
+        +author:William +author:Bourn +author:Oliver, +author:1799-1847 ) OR author:"Peabody,
+        William Bourn Oliver, 1799-1847"'',''defType''=>''edismax'',''f.fast_era_facet.facet.limit''=>''6'',''spellcheck.maxResultsForSuggest''=>''1'',''f.lc_callnum_facet.facet.sort''=>''index'',''f.fast_topic_facet.facet.limit''=>''6'',''wt''=>''ruby'',''facet''=>''true'',''f.fast_genre_facet.facet.limit''=>''6'',''f.format.facet.limit''=>''11'',''f.language_facet.facet.limit''=>''6'',''search_field''=>''advanced''}},''response''=>{''numFound''=>11,''start''=>0,''maxScore''=>9965.33,''docs''=>[]},''facet_counts''=>{''facet_queries''=>{''pub_date_facet:[1828
+        TO 1829]''=>2,''pub_date_facet:[1830 TO 1839]''=>7,''pub_date_facet:[1850
+        TO 1859]''=>1,''pub_date_facet:[1870 TO 1878]''=>1},''facet_fields''=>{''format''=>[''Book'',11],''online''=>[''At
+        the Library'',7,''Online'',4],''language_facet''=>[''English'',11],''location_facet''=>[''Kroch
+        Library Rare & Manuscripts'',6,''Mann Library'',1,''Olin Library'',1]},''facet_ranges''=>{},''facet_intervals''=>{},''facet_heatmaps''=>{}},''spellcheck''=>{''suggestions''=>[],''correctlySpelled''=>true}}
+
+'
+    http_version: 
+  recorded_at: Fri, 25 Aug 2017 21:16:43 GMT
+- request:
+    method: get
+    uri: http://holdings6.library.cornell.edu/holdings/retrieve_detail_short/6197095/2397781/451175/3310686?Accept-Encoding=gzip,%20deflate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      Accept:
+      - "*/*"
+      Date:
+      - Fri, 25 Aug 2017 21:16:43 GMT
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Fri, 25 Aug 2017 21:16:43 GMT
+      Server:
+      - Apache
+      Location:
+      - https://holdings6.library.cornell.edu/holdings/retrieve_detail_short/6197095/2397781/451175/3310686?Accept-Encoding=gzip%252C+deflate
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '317'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>302 Found</title>
+        </head><body>
+        <h1>Found</h1>
+        <p>The document has moved <a href="https://holdings6.library.cornell.edu/holdings/retrieve_detail_short/6197095/2397781/451175/3310686?Accept-Encoding=gzip%252C+deflate">here</a>.</p>
+        </body></html>
+    http_version: 
+  recorded_at: Fri, 25 Aug 2017 21:16:43 GMT
+recorded_with: VCR 3.0.3

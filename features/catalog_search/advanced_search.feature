@@ -1,6 +1,6 @@
-@all_search
-@adv_search
-@search
+#@all_search
+#@adv_search
+#@search
 Feature: Search
   In order to find documents in an advanced search way
   As a user
@@ -98,10 +98,10 @@ Feature: Search
     Then I should get results
     And I should see the label '1 - 2'
 
+# @callnumber
+# @javascript
  @adv_search
  @all_search
- @callnumber
-  @javascript
   Scenario: Perform an advanced search and see call number facet
     When I literally go to advanced
     And I fill in "q_row1" with 'biology'
@@ -186,8 +186,10 @@ Feature: Search
     And I select 'ISBN/ISSN' from the 'search_field_advanced' drop-down
     And I press 'advanced_search'
     Then I should get results
+    And I sleep 4 seconds
     And I should see the label '1 result'
     And I should see the label 'Frederick the Great'
+    And I sleep 4 seconds
 
 #
  @adv_search
@@ -204,11 +206,11 @@ Feature: Search
     Then I should get results
     And I should see the label '1 result'
 
+# @issnisbn
+# @javascript
 # purple rain: music
  @adv_search
  @all_search
- @issnisbn
- @javascript
   Scenario: Perform an advanced search by other number
     When I literally go to advanced
     And I sleep 4 seconds
@@ -219,10 +221,10 @@ Feature: Search
     And I should see the label '1 result'
 
 # . Greek papyri from Montserrat (P.Monts.Roca IV) 2014
+# @javascript
  @adv_search
  @all_search
  @series
- @javascript
   Scenario: Perform an advanced search by series
     When I literally go to advanced
     And I sleep 4 seconds
@@ -231,6 +233,7 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label '1 result'
+    And I sleep 4 seconds
 
 #
  @adv_search
@@ -247,14 +250,16 @@ Feature: Search
     And I select 'phrase' from the 'op_row2' drop-down
     And I press 'advanced_search'
     Then I should get results
+    And I sleep 8 seconds
     And I should see the label '1 result'
+    And I sleep 8 seconds
 
+# @javascript
 #
  @adv_search
  @all_search
  @adv_donor
- @javascript
-  Scenario: Perform an advanced search by donor
+  Scenario: Perform a one row advanced search by donor
     When I literally go to advanced
     And I fill in "q_row1" with 'Jan Olsen'
     And I select 'all' from the 'op_row' drop-down
@@ -264,12 +269,12 @@ Feature: Search
     And I should see the label '1 - 19 of 19'
     #And I should not see the label 'Modify advanced'
 
-#
+# search Jan Olsen as Donor name
+# @javascript
  @adv_search
  @all_search
  @adv_donor
- @javascript
-  Scenario: Perform an advanced search by donor
+  Scenario: Perform a two row advanced search by donor name
     When I literally go to advanced
     And I fill in "q_row1" with 'Jan'
     And I select 'all' from the 'op_row' drop-down
@@ -298,6 +303,7 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label '1 - 12 of 12'
+    And I sleep 4 seconds
 
 # Subject Molecular Biology and Recombinant DNA as Subjects
  @adv_search
@@ -315,6 +321,7 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label '1 - 7 of 7'
+    And I sleep 4 seconds
 
 # Subject Molecular Biology and Recombinant DNA as Subjects
  @adv_search
@@ -338,6 +345,7 @@ Feature: Search
     Then I should get results
     And I should see the label '1 result'
     And I should see the label 'Yeast molecular biology--recombinant DNA'
+    And I sleep 4 seconds
 
 #  fungi, recombinant dna, any publisher 
  @adv_search
@@ -359,6 +367,7 @@ Feature: Search
     And I select 'Publisher' from the 'search_field_advanced3' drop-down
     And I press 'advanced_search'
     Then I should get results
+    And I sleep 8 seconds
     #And I should see the label '1 result'
     #And I should see the label 'Yeast molecular biology--recombinant DNA'
 
@@ -381,6 +390,7 @@ Feature: Search
     Then I should get results
     And I should see the label '1 - 8 of 8'
     And I should see the label 'Modify advanced'
+    And I sleep 8 seconds
 
  @begins_with
  @adv_search
@@ -400,6 +410,7 @@ Feature: Search
     And I should see the label 'Modify advanced'
     And I should see the label 'We were Feminists Once'
     And I should see the label '1 result'
+    And I sleep 8 seconds
 
 
 
@@ -418,6 +429,7 @@ Feature: Search
     And I should see the label 'Modify advanced'
     And I should see the label 'We were Feminists'
     And I should see the label '1 result'
+    And I sleep 8 seconds
 
 
  @wip
@@ -455,9 +467,10 @@ Feature: Search
     Given PENDING 
     When I literally go to advanced
     And I fill in "q_row1" with ' '
-    And I fill in "q_row2" with 'we were once'
+    And I fill in "q_row2" with 'we were feminists'
     And I press 'advanced_search'
     Then I should not see the label 'searched'
+    And I sleep 4 seconds
 
  @adv_search
  @all_search
@@ -474,6 +487,7 @@ Feature: Search
     Then it should have link "Title: beef" with value 'catalog?&q=100%25&search_field=title&action=index&commit=Search'
     #Then it should have link "Title: beef" with value 'catalog?&amp;q=100%&amp;search_field=title&amp;action=index&amp;commit=Search'
     Then click on first link "Title: beef"
+    And I sleep 4 seconds
 
 
  @adv_search
@@ -489,9 +503,12 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label 'Modify advanced'
+    And I sleep 4 seconds
     And I should see the label 'Institutional meat purchase specifications for fresh beef'
     Then click on first link "Institutional meat purchase specifications for fresh beef"
+    And I sleep 4 seconds
     And I should see the label 'Institutional meat purchase specifications for fresh beef'
+    And I sleep 4 seconds
     Then click on first link "Next »"
     And I should see the label 'A sea-fight'
     Then click on first link "Previous"
@@ -533,5 +550,8 @@ Feature: Search
     And I select 'begins' from the 'op_row' drop-down
     And I press 'advanced_search'
     Then I should get results
+    And I sleep 10 seconds
     And I should see the label 'Modify advanced'
+    And I sleep 10 seconds
     And I should see the label 'Varieties of capitalism and business history'
+    And I sleep 10 seconds

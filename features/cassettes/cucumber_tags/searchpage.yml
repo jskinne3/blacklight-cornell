@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://da-prod-solr.library.cornell.edu/solr/b7/select?defType=edismax&f.author_facet.facet.limit=6&f.fast_era_facet.facet.limit=6&f.fast_genre_facet.facet.limit=6&f.fast_geo_facet.facet.limit=6&f.fast_topic_facet.facet.limit=6&f.format.facet.limit=11&f.language_facet.facet.limit=6&f.lc_alpha_facet.facet.limit=6&f.lc_callnum_facet.facet.limit=-1&f.lc_callnum_facet.facet.sort=index&f.location_facet.facet.limit=6&f.online.facet.limit=3&f.subject_content_facet.facet.limit=6&facet=true&facet.query=pub_date_facet:%5B2015%20TO%202016%5D&mm=1&q=(%20(%2Btitle:combinatorial%20%2Btitle:algorithms)%20OR%20title_phrase:%22combinatorial%20algorithms%22)%20NOT%20((%2Bspringer)%20OR%20phrase:%22springer%22)&qt=search&rows=0&search_field=advanced&sort=score%20desc,%20pub_date_sort%20desc,%20title_sort%20asc&spellcheck.maxResultsForSuggest=1&spellcheck.q=combinatorial%20algorithms%20springer%20&wt=ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Aug 2017 20:31:53 GMT
+      Last-Modified:
+      - Fri, 25 Aug 2017 20:31:14 GMT
+      Etag:
+      - '"ZGZjNmMwMDAwMDAwMDAwMFNvbHI="'
+      Content-Type:
+      - text/plain;charset=utf-8
+      Content-Length:
+      - '2125'
+      Via:
+      - 1.1 da-prod-solr9.library.cornell.edu
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{''responseHeader''=>{''zkConnected''=>true,''status''=>0,''QTime''=>926,''params''=>{''f.subject_content_facet.facet.limit''=>''6'',''f.location_facet.facet.limit''=>''6'',''f.fast_geo_facet.facet.limit''=>''6'',''f.lc_alpha_facet.facet.limit''=>''6'',''f.online.facet.limit''=>''3'',''facet.query''=>[''pub_date_facet:[1973
+        TO 1974]'',''pub_date_facet:[1975 TO 1979]'',''pub_date_facet:[1980 TO 1984]'',''pub_date_facet:[1985
+        TO 1989]'',''pub_date_facet:[1990 TO 1994]'',''pub_date_facet:[1995 TO 1999]'',''pub_date_facet:[2000
+        TO 2004]'',''pub_date_facet:[2005 TO 2009]'',''pub_date_facet:[2010 TO 2014]'',''pub_date_facet:[2015
+        TO 2016]''],''defType''=>''edismax'',''spellcheck.maxResultsForSuggest''=>''1'',''spellcheck.q''=>''combinatorial
+        algorithms springer '',''f.lc_callnum_facet.facet.sort''=>''index'',''wt''=>''ruby'',''f.fast_genre_facet.facet.limit''=>''6'',''f.format.facet.limit''=>''11'',''mm''=>''1'',''f.author_facet.facet.limit''=>''6'',''qt''=>''search'',''f.lc_callnum_facet.facet.limit''=>''-1'',''sort''=>''score
+        desc, pub_date_sort desc, title_sort asc'',''rows''=>''0'',''q''=>''( (+title:combinatorial
+        +title:algorithms) OR title_phrase:"combinatorial algorithms") NOT ((+springer)
+        OR phrase:"springer")'',''f.fast_era_facet.facet.limit''=>''6'',''f.fast_topic_facet.facet.limit''=>''6'',''facet''=>''true'',''f.language_facet.facet.limit''=>''6'',''search_field''=>''advanced''}},''response''=>{''numFound''=>43,''start''=>0,''maxScore''=>199537.52,''docs''=>[]},''facet_counts''=>{''facet_queries''=>{''pub_date_facet:[1973
+        TO 1974]''=>2,''pub_date_facet:[1975 TO 1979]''=>5,''pub_date_facet:[1980
+        TO 1984]''=>2,''pub_date_facet:[1985 TO 1989]''=>9,''pub_date_facet:[1990
+        TO 1994]''=>2,''pub_date_facet:[1995 TO 1999]''=>5,''pub_date_facet:[2000
+        TO 2004]''=>3,''pub_date_facet:[2005 TO 2009]''=>6,''pub_date_facet:[2010
+        TO 2014]''=>6,''pub_date_facet:[2015 TO 2016]''=>3},''facet_fields''=>{''format''=>[''Book'',42,''Thesis'',3],''online''=>[''At
+        the Library'',25,''Online'',19],''language_facet''=>[''English'',42],''location_facet''=>[''Mathematics
+        Library'',19,''Library Annex'',6,''Kroch Library Rare & Manuscripts'',3,''Mann
+        Library'',1,''Uris Library'',1]},''facet_ranges''=>{},''facet_intervals''=>{},''facet_heatmaps''=>{}},''spellcheck''=>{''suggestions''=>[],''correctlySpelled''=>true}}
+
+'
+    http_version: 
+  recorded_at: Fri, 25 Aug 2017 20:31:54 GMT
+recorded_with: VCR 3.0.3

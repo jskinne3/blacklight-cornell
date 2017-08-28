@@ -22,6 +22,7 @@ Feature: Select and export items from the result set
     And I sleep 5 seconds
     And click on link "Selected Items"
     Then I should see the label 'Shelter medicine for veterinarians and staff'
+    And I sleep 5 seconds
 
 # there is a popup dialog, but poltergeist auto clicks okay, 
 @all_select_and_export

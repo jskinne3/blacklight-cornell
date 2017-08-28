@@ -16,7 +16,9 @@ VCR.configure do |c|
       c.debug_logger = File.open("vcr.log", 'w')
       #c.allow_http_connections_when_no_cassette = ENV['VCR_ALLOW_HTTP'] ? true : false #false means we *always* have to use VCR for HTTP
       #c.allow_http_connections_when_no_cassette = true # true means that we don't *always* have to use VCR for HTTP, only when we want
-      c.allow_http_connections_when_no_cassette = true # false means that we *always* have to use VCR for HTTP
+      vcr_allow_http = ENV['VCR_ALLOW_HTTP'].to_s =='false' ? false : true 
+      c.allow_http_connections_when_no_cassette = vcr_allow_http  #false means *must* use VCR for HTTP
+      #c.allow_http_connections_when_no_cassette = ENV['VCR_ALLOW_HTTP'] ? ENV['VCR_ALLOW_HTTP'] : true 
     else 
       VCR.turn_off!
       WebMock.allow_net_connect!
@@ -25,29 +27,40 @@ VCR.configure do |c|
   c.ignore_localhost = true
   c.default_cassette_options = { :record => :new_episodes, :erb => true }
 end
+# @begins_with @adv_search @all_search @adv_place @javascript
 if use_mock_and_vcr
 then
   VCR.cucumber_tags do |t|
+    t.tag  '@adv_place'
+    t.tag  '@adv_search'
     t.tag  '@all'
+    t.tag  '@all_item_view'
+    t.tag  '@all_results_list'
+    t.tag  '@all_search'
+    t.tag  '@all_select_and_export'
+    t.tag  '@availability'
+    t.tag  '@begins_with'
+    t.tag  '@browse'
+    t.tag  '@callnumber'
     t.tag  '@citations'
     t.tag  '@databases'
     t.tag  '@digitalcollections'
-    t.tag  '@browse'
-    t.tag  '@tou'
-    t.tag  '@linkfields'
-    t.tag  '@begins_with'
-    t.tag  '@all_select_and_export'
-    t.tag  '@all_search'
-    t.tag  '@all_results_list'
-    t.tag  '@all_item_view'
-    t.tag  '@javascript'
-    t.tag  '@homepage'
-    t.tag  '@holdings'
     t.tag  '@DISCOVERYACCESS-137'
     t.tag  '@DISCOVERYACCESS-1430'
-    t.tag  '@availability'
+    t.tag  '@holdings'
+    t.tag  '@homepage'
+    t.tag  '@issnisbn'
+    t.tag  '@isbnissn'
+    t.tag  '@javascript'
+    t.tag  '@linkfields'
     t.tag  '@missing'
-    t.tag  '@search_availability_title_mission_etrangeres_missing'
+    t.tag  '@notes'
+    t.tag  '@peabody'
+    t.tag  '@publisher'
     t.tag  '@search_availability_annotated_hobbit'
+    t.tag  '@search_availability_title_mission_etrangeres_missing'
+    t.tag  '@searchpage'
+    t.tag  '@tou'
+
   end
 end

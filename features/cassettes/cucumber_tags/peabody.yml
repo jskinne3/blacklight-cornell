@@ -982,4 +982,238 @@ http_interactions:
 '
     http_version: 
   recorded_at: Mon, 28 Aug 2017 20:38:29 GMT
+- request:
+    method: get
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/select?defType=edismax&f.author_facet.facet.limit=6&f.fast_era_facet.facet.limit=6&f.fast_genre_facet.facet.limit=6&f.fast_geo_facet.facet.limit=6&f.fast_topic_facet.facet.limit=6&f.format.facet.limit=11&f.language_facet.facet.limit=6&f.lc_alpha_facet.facet.limit=6&f.lc_callnum_facet.facet.limit=-1&f.lc_callnum_facet.facet.sort=index&f.location_facet.facet.limit=6&f.online.facet.limit=3&f.subject_content_facet.facet.limit=6&facet=true&facet.field=collection&mm=1&q=(%2BPeabody,%20%2BWilliam%20%2BBourn%20%2BOliver,%20%2B1799-1847%20)%20OR%20phrase:%22Peabody,%20William%20Bourn%20Oliver,%201799-1847%22&qt=search&rows=20&sort=score%20desc,%20pub_date_sort%20desc,%20title_sort%20asc&stats=true&stats.field=pub_date_facet&wt=ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 28 Aug 2017 21:18:41 GMT
+      Last-Modified:
+      - Mon, 28 Aug 2017 21:18:23 GMT
+      Etag:
+      - '"YjA1YmMwMDAwMDAwMDAwMFNvbHI="'
+      Content-Type:
+      - text/plain;charset=utf-8
+      Content-Length:
+      - '27509'
+      Via:
+      - 1.1 da-prod-solr9.library.cornell.edu
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{''responseHeader''=>{''zkConnected''=>true,''status''=>0,''QTime''=>6190,''params''=>{''f.subject_content_facet.facet.limit''=>''6'',''mm''=>''1'',''f.author_facet.facet.limit''=>''6'',''facet.field''=>[''online'',''format'',''author_facet'',''pub_date_facet'',''workid_facet'',''language_facet'',''fast_topic_facet'',''fast_geo_facet'',''fast_era_facet'',''fast_genre_facet'',''subject_content_facet'',''lc_alpha_facet'',''location_facet'',''hierarchy_facet'',''authortitle_facet'',''lc_callnum_facet'',''collection''],''qt''=>''search'',''f.location_facet.facet.limit''=>''6'',''f.fast_geo_facet.facet.limit''=>''6'',''f.lc_alpha_facet.facet.limit''=>''6'',''f.lc_callnum_facet.facet.limit''=>''-1'',''sort''=>''score
+        desc, pub_date_sort desc, title_sort asc'',''rows''=>''20'',''f.online.facet.limit''=>''3'',''q''=>''(+Peabody,
+        +William +Bourn +Oliver, +1799-1847 ) OR phrase:"Peabody, William Bourn Oliver,
+        1799-1847"'',''defType''=>''edismax'',''f.fast_era_facet.facet.limit''=>''6'',''f.lc_callnum_facet.facet.sort''=>''index'',''stats''=>''true'',''f.fast_topic_facet.facet.limit''=>''6'',''wt''=>''ruby'',''facet''=>''true'',''f.fast_genre_facet.facet.limit''=>''6'',''f.format.facet.limit''=>''11'',''f.language_facet.facet.limit''=>''6'',''stats.field''=>''pub_date_facet''}},''response''=>{''numFound''=>12,''start''=>0,''maxScore''=>525803.6,''docs''=>[{''holdings_record_display''=>[''{"id":"2879050","modified_date":"20081013160418","copy_number":null,"callnos":["PS2534.P85
+        A16 1850"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"nocirc","item_id":"4278479","year":"","item_type_id":"9","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"2879050","recalls_placed":"0","create_date":"2000-05-31
+        00:00:00.0","item_barcode":"31924022147726","modify_date":"2008-10-13 16:04:18.0","perm_location":{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}}''],''id''=>''2397781'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''1850''],''pub_date_facet''=>1850,''pub_info_display''=>[''Boston,
+        B. H. Greene; New York, C. B. Norton; [etc., etc.] 1850.''],''fulltitle_display''=>''The
+        literary remains of the late William B. O. Peabody, D. D'',''title_display''=>''The
+        literary remains of the late William B. O. Peabody, D. D'',''author_display''=>''Peabody,
+        William Bourn Oliver, 1799-1847.'',''other_id_display''=>[''(CStRLIN)NYCX93B11317'',''(NIC)notisAMB1348'',''(OCoLC)5621492'',''2397781''],''score''=>525803.6},{''holdings_record_display''=>[''{"id":"5221133","modified_date":"20160427074753","copy_number":null,"callnos":["CT211
+        .B61 v.18 no.10"],"notes":["V.18:no.10 in a vol. with spine title: Biographical
+        Pamphlets.  United States. 18."],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"olin,anx","number":101,"name":"Library
+        Annex","library":"Library Annex"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"nocirc","item_id":"9949511","year":"","item_type_id":"9","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"Bound
+        with:","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"5221133","recalls_placed":"0","create_date":"2016-04-27
+        10:46:22.0","item_barcode":"","modify_date":"","perm_location":{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}}''],''id''=>''4705194'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''1861''],''pub_date_facet''=>1861,''pub_info_display''=>[''Springfield
+        [Mass.] : Samuel Bowles & Co., Printers, 1861.''],''fulltitle_display''=>''Address
+        at the dedication of a monument to Rev. W.B.O. Peabody, D.D. : delivered at
+        Springfield, September 29, 1861'',''title_display''=>''Address at the dedication
+        of a monument to Rev. W.B.O. Peabody, D.D'',''author_display''=>''Walker,
+        George.'',''subtitle_display''=>''delivered at Springfield, September 29,
+        1861'',''other_id_display''=>[''(OCoLC)24989183'',''4705194''],''score''=>344439.88},{''holdings_record_display''=>[''{"id":"9976789","modified_date":"20160830130609","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''9648229'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''[1833]''],''pub_date_facet''=>1833,''pub_info_display''=>[''[Place
+        of publication not identified] : [publisher not identified], [1833]''],''fulltitle_display''=>''The
+        duties and dangers of those who are born free : a sermon preached at the annual
+        election, January 2, 1833, before His Excellency Levi Lincoln, governor, His
+        Honor Thomas L. Winthrop, lieutenant governor, the honorable council and the
+        legislature of Massachusetts'',''title_display''=>''The duties and dangers
+        of those who are born free'',''author_display''=>''Peabody, William Bourn
+        Oliver, 1799-1847, author'',''subtitle_display''=>''a sermon preached at the
+        annual election, January 2, 1833, before His Excellency Levi Lincoln, governor,
+        His Honor Thomas L. Winthrop, lieutenant governor, the honorable council and
+        the legislature of Massachusetts'',''other_id_display''=>[''(OCoLC)367976750'',''(MiFhGG)NCCO3005296'',''9648229''],''url_access_json''=>[''{"providercode":"PRVGIT","dbcode":"~BQPML","description":"Nineteenth
+        Century Collections Online: Religion, Society, Spirituality, and Reform Connect
+        to online resource.","url":"http://proxy.library.cornell.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&res_id=info:sid/gale:NCCO&ctx_enc=info:ofi:enc:UTF-8&rft_val_fmt=info:ofi/fmt:kev:mtx:unknown&rft.artnum=CRQYQX560259208&req_dat=info:sid/gale:ugnid:cornell"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&res_id=info:sid/gale:NCCO&ctx_enc=info:ofi:enc:UTF-8&rft_val_fmt=info:ofi/fmt:kev:mtx:unknown&rft.artnum=CRQYQX560259208&req_dat=info:sid/gale:ugnid:cornell|Nineteenth
+        Century Collections Online: Religion, Society, Spirituality, and Reform Connect
+        to online resource.''],''score''=>51093.21},{''holdings_record_display''=>[''{"id":"6652881","modified_date":"20080118154414","copy_number":null,"callnos":["Harris
+        7511 F34"],"notes":["No. 21 in a vol. lettered: Theology pamphlets, 34."],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}]}'',''{"id":"6655613","modified_date":"20080124141930","copy_number":null,"callnos":["Harris
+        7511 F57"],"notes":["No. 24 in a vol. lettered: Theology pamphlets, 57."],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"nocirc","item_id":"10219558","year":"","item_type_id":"9","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"Bound
+        with:","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"6652881","recalls_placed":"0","create_date":"2017-03-28
+        10:16:11.0","item_barcode":"","modify_date":"","perm_location":{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}}'',''{"copy_number":"1","item_type_name":"nocirc","item_id":"10219716","year":"","item_type_id":"9","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"Bound
+        with:","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"6655613","recalls_placed":"0","create_date":"2017-03-28
+        10:16:14.0","item_barcode":"","modify_date":"","perm_location":{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}}''],''id''=>''6197095'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''[ca.1833]''],''pub_date_facet''=>1833,''pub_info_display''=>[''Boston
+        : Crosby and Nichols, [ca.1833]''],''fulltitle_display''=>''"Come and see",
+        or the duty of those who dread the sentiments of other Christians'',''title_display''=>''"Come
+        and see", or the duty of those who dread the sentiments of other Christians'',''author_display''=>''Peabody,
+        William Bourn Oliver, 1799-1847.'',''edition_display''=>[''3rd ed.''],''other_id_display''=>[''6197095'',''(OCoLC)69229066''],''score''=>15085.453},{''holdings_record_display''=>[''{"id":"6806498","modified_date":"20080921103050","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''6356967'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''1833''],''pub_date_facet''=>1833,''pub_info_display''=>[''Boston,
+        Dutton and Wentworth, printers to the State, 1833.''],''fulltitle_display''=>''The
+        duties and dangers of those who are born free . A sermon preached at the annual
+        election, January 2, 1833, before His Excellency Levi Lincoln, governor, His
+        Honor Thomas L. Winthrop, lieutenant governor, the honorable council and the
+        legislature of Massachusetts'',''title_display''=>''The duties and dangers
+        of those who are born free'',''author_display''=>''Peabody, William Bourn
+        Oliver, 1799-1847.'',''subtitle_display''=>''A sermon preached at the annual
+        election, January 2, 1833, before His Excellency Levi Lincoln, governor, His
+        Honor Thomas L. Winthrop, lieutenant governor, the honorable council and the
+        legislature of Massachusetts'',''other_id_display''=>[''(OCoLC)255378409'',''6356967''],''url_access_display''=>[''http://dlxs.library.cornell.edu/mayantislavery/02818120''],''url_access_json''=>[''{"url":"http://dlxs.library.cornell.edu/mayantislavery/02818120"}''],''score''=>14782.139},{''holdings_record_display''=>[''{"id":"6803953","modified_date":"20080921101610","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''6354422'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''1828''],''pub_date_facet''=>1828,''pub_info_display''=>[''Springfield
+        [Mass.] : Printed by S. Bowles, 1828.''],''fulltitle_display''=>''An address,
+        delivered at Springfield, before the Hampden Colonization Society, July 4th,
+        1828'',''title_display''=>''An address, delivered at Springfield, before the
+        Hampden Colonization Society, July 4th, 1828'',''author_display''=>''Peabody,
+        William Bourn Oliver, 1799-1847.'',''other_id_display''=>[''(OCoLC)255337000'',''6354422''],''url_access_display''=>[''http://dlxs.library.cornell.edu/mayantislavery/28893413''],''url_access_json''=>[''{"url":"http://dlxs.library.cornell.edu/mayantislavery/28893413"}''],''score''=>14756.5205},{''holdings_record_display''=>[''{"id":"549436","modified_date":"20081013113351","copy_number":null,"callnos":["BV4260.M4
+        M41 v.7 no.11"],"notes":["No.11 in a vol. lettered: Massachusetts election
+        sermons. 1823-36"],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}]}'',''{"id":"549437","modified_date":"20070110160333","copy_number":null,"callnos":["Rare
+        Books E441 .M46 v.12 no.20"],"notes":["Samuel J. May Anti-Slavery Pamphlet
+        Collection. No. 20 in a vol. lettered: Anti-slavery tracts."],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc","number":87,"name":"Kroch
+        Library Rare & Manuscripts (Non-Circulating)","library":"Kroch Library Rare
+        & Manuscripts"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"nocirc","item_id":"10174943","year":"","item_type_id":"9","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"Bound
+        with:","item_sequence_number":"2","temp_item_type_id":"0","mfhd_id":"549436","recalls_placed":"0","create_date":"2017-03-23
+        13:52:55.0","item_barcode":"","modify_date":"","perm_location":{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}}''],''id''=>''451175'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''1833''],''pub_date_facet''=>1833,''pub_info_display''=>[''Boston,
+        Dutton and Wentworth, printers to the State, 1833.''],''fulltitle_display''=>''The
+        duties and dangers of those who are born free. A sermon preached at the annual
+        election, January 2, 1833, before His Excellency Levi Lincoln, governor, His
+        Honor Thomas L. Winthrop, lieutenant governor, the honorable council and the
+        legislature of Massachusetts'',''title_display''=>''The duties and dangers
+        of those who are born free'',''author_display''=>''Peabody, William Bourn
+        Oliver, 1799-1847.'',''subtitle_display''=>''A sermon preached at the annual
+        election, January 2, 1833, before His Excellency Levi Lincoln, governor, His
+        Honor Thomas L. Winthrop, lieutenant governor, the honorable council and the
+        legislature of Massachusetts'',''other_id_display''=>[''(CStRLIN)NYCX0895567B'',''(NIC)notisABY2476'',''(OCoLC)895567'',''451175''],''score''=>14614.924},{''online''=>[''At
+        the Library''],''holdings_record_display''=>[''{"id":"3859699","modified_date":"20010123114102","copy_number":null,"callnos":["Rare
+        Books E441 .M46 v.272 no.13"],"notes":["Samuel J. May Anti-Slavery Pamphlet
+        Collection. No. 13 in a vol. lettered:  May Anti-Slavery Pamphlets."],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc","number":87,"name":"Kroch
+        Library Rare & Manuscripts (Non-Circulating)","library":"Kroch Library Rare
+        & Manuscripts"}]}''],''id''=>''3310686'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''1828''],''pub_date_facet''=>1828,''pub_info_display''=>[''Springfield
+        [Mass.] : Printed by S. Bowles, 1828.''],''fulltitle_display''=>''An address,
+        delivered at Springfield, before the Hampden Colonization Society, July 4th,
+        1828'',''title_display''=>''An address, delivered at Springfield, before the
+        Hampden Colonization Society, July 4th, 1828'',''author_display''=>''Peabody,
+        William Bourn Oliver, 1799-1847.'',''other_id_display''=>[''(NIC)notisARA0733'',''(OCoLC)41914467'',''3310686''],''score''=>14614.258},{''holdings_record_display''=>[''{"id":"9977277","modified_date":"20160830130942","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''9648719'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''[1833]''],''pub_date_facet''=>1833,''pub_info_display''=>[''[Place
+        of publication not identified] : [publisher not identified], [1833]''],''fulltitle_display''=>''Come
+        and see : the duty of those who dislike and dread the sentiments of other
+        Christians'',''title_display''=>''Come and see'',''author_display''=>''Peabody,
+        William Bourn Oliver, 1799-1847, author'',''subtitle_display''=>''the duty
+        of those who dislike and dread the sentiments of other Christians'',''other_id_display''=>[''(OCoLC)904788825'',''(MiFhGG)NCCO3005812'',''9648719''],''url_access_json''=>[''{"providercode":"PRVGIT","dbcode":"~BQPML","description":"Nineteenth
+        Century Collections Online: Religion, Society, Spirituality, and Reform Connect
+        to online resource.","url":"http://proxy.library.cornell.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&res_id=info:sid/gale:NCCO&ctx_enc=info:ofi:enc:UTF-8&rft_val_fmt=info:ofi/fmt:kev:mtx:unknown&rft.artnum=CUFUBR970557214&req_dat=info:sid/gale:ugnid:cornell"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&res_id=info:sid/gale:NCCO&ctx_enc=info:ofi:enc:UTF-8&rft_val_fmt=info:ofi/fmt:kev:mtx:unknown&rft.artnum=CUFUBR970557214&req_dat=info:sid/gale:ugnid:cornell|Nineteenth
+        Century Collections Online: Religion, Society, Spirituality, and Reform Connect
+        to online resource.''],''score''=>13379.109},{''holdings_record_display''=>[''{"id":"5974613","modified_date":"20051223172143","copy_number":null,"callnos":["arW15512"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"nocirc","item_id":"7373500","year":"","item_type_id":"9","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"5974613","recalls_placed":"0","create_date":"2005-04-07
+        16:55:56.0","item_barcode":"31924031509825","modify_date":"2006-02-18 17:09:38.0","perm_location":{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}}''],''id''=>''5460087'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''1878''],''pub_date_facet''=>1878,''pub_info_display''=>[''Springfield,
+        Mass. : Published by direction of the Proprietors, 1878''],''fulltitle_display''=>''Historical
+        memoir of the Springfield Cemetery : read to the proprietors at their annual
+        meeting, May 6, 1878'',''title_display''=>''Historical memoir of the Springfield
+        Cemetery'',''author_display''=>''Briggs, Albert D.'',''subtitle_display''=>''read
+        to the proprietors at their annual meeting, May 6, 1878'',''other_id_display''=>[''(OCoLC)21388559'',''5460087''],''score''=>9494.071},{''online''=>[''At
+        the Library''],''holdings_record_display''=>[''{"id":"9764","modified_date":null,"copy_number":null,"callnos":["E176
+        .S73 v.2"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"olin","number":99,"name":"Olin
+        Library","library":"Olin Library"}]}''],''id''=>''4442'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''1834''],''pub_date_facet''=>1834,''pub_info_display''=>[''Boston
+        : Hilliard, Gray ; London : R. J. Kennett, 1834.''],''title_display''=>''Lives
+        of Alexander Wilson and Captain John Smith'',''fulltitle_display''=>''Lives
+        of Alexander Wilson and Captain John Smith'',''other_id_display''=>[''(CStRLIN)NYCX85B140222'',''(NIC)notisAAA4494'',''(OCoLC)6920063'',''4442''],''score''=>8989.328},{''holdings_record_display''=>[''{"id":"736549","modified_date":"20150507144905","copy_number":null,"callnos":["QL183
+        .A2"],"notes":["Bound with: Massachusetts. Zoological and Botanical Survey.  Report
+        of the fishes, reptiles and birds of Massachusetts."],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"mann,spec","number":73,"name":"Mann
+        Library Special Collections (Non-Circulating)","library":"Mann Library"}]}'',''{"id":"736550","modified_date":"20081013160303","copy_number":null,"callnos":["QL183
+        .A4 1838"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"nocirc","item_id":"1764897","year":"","item_type_id":"9","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"736550","recalls_placed":"0","create_date":"2000-05-31
+        00:00:00.0","item_barcode":"31924024545935","modify_date":"2008-10-13 16:03:03.0","perm_location":{"code":"rmc,anx","number":203,"name":"Kroch
+        Library Rare & Manuscripts (Request in advance)","library":"Kroch Library
+        Rare & Manuscripts"}}'',''{"copy_number":"1","item_type_name":"book","item_id":"9732418","year":"","item_type_id":"3","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"Bound
+        with","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"736549","recalls_placed":"0","create_date":"2015-05-07
+        14:49:12.0","item_barcode":"","modify_date":"","perm_location":{"code":"mann,spec","number":73,"name":"Mann
+        Library Special Collections (Non-Circulating)","library":"Mann Library"}}''],''id''=>''603875'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''1838''],''pub_date_facet''=>1838,''pub_info_display''=>[''Boston,
+        Dutton and Wentworth, State Printers, 1838.''],''fulltitle_display''=>''Reports
+        of the Commissioners on the Zoological Survey of the State'',''title_display''=>''Reports
+        of the Commissioners on the Zoological Survey of the State'',''author_display''=>''Massachusetts.
+        Zoological and Botanical Survey.'',''other_id_display''=>[''(CStRLIN)NYCX85B93620'',''(NIC)notisACP9963'',''(OCoLC)744409'',''603875''],''score''=>5005.148}]},''facet_counts''=>{''facet_queries''=>{},''facet_fields''=>{''online''=>[''At
+        the Library'',8,''Online'',4],''format''=>[''Book'',12],''author_facet''=>[''Peabody,
+        William Bourn Oliver, 1799-1847'',11,''Colonization Society of Hampden County'',2,''American
+        Unitarian Association'',1,''Briggs, Albert D'',1,''Emerson, George B. (George
+        Barrell), 1797-1881'',1,''Emmons, Ebenezer, 1799-1863'',1],''pub_date_facet''=>[''1833'',5,''1828'',2,''1834'',1,''1838'',1,''1850'',1,''1861'',1,''1878'',1],''workid_facet''=>[''1880968'',3,''13239733'',2,''38229687'',2,''18703600'',1,''291302684'',1,''341847194'',1,''348281925'',1,''426954811'',1],''language_facet''=>[''English'',12],''fast_topic_facet''=>[''Abolitionists
+        > Societies, etc'',2,''African Americans > Colonization'',2,''Political science'',2,''Slavery
+        and the church'',2,''War'',2,''Cemeteries'',1],''fast_geo_facet''=>[''United
+        States'',3,''Africa'',2,''Massachusetts > Springfield'',2,''Massachusetts'',1],''fast_era_facet''=>[],''fast_genre_facet''=>[''Biography'',2,''Genealogy'',1],''subject_content_facet''=>[''Non-Fiction
+        (books)'',12],''lc_alpha_facet''=>[],''location_facet''=>[''Kroch Library
+        Rare & Manuscripts'',6,''Library Annex'',1,''Mann Library'',1,''Olin Library'',1],''hierarchy_facet''=>[],''authortitle_facet''=>[''Peabody,
+        William Bourn Oliver, 1799-1847. | address, delivered at Springfield, before
+        the Hampden Colonization Society, July 4th, 1828'',2,''Peabody, William Bourn
+        Oliver, 1799-1847. | duties and dangers of those who are born free'',2,''Briggs,
+        Albert D. | Historical memoir of the Springfield Cemetery'',1,''Hillard, George
+        Stillman, 1808-1879. | Life of Captain John Smith. 1834'',1,''Massachusetts.
+        Zoological and Botanical Survey. | Reports of the Commissioners on the Zoological
+        Survey of the State'',1,''Peabody, William Bourn Oliver, 1799-1847, | Come
+        and see'',1,''Peabody, William Bourn Oliver, 1799-1847, | duties and dangers
+        of those who are born free'',1,''Peabody, William Bourn Oliver, 1799-1847.
+        | "Come and see", or the duty of those who dread the sentiments of other Christians'',1,''Peabody,
+        William Bourn Oliver, 1799-1847. | Life of Alexander Wilson. 1834'',1,''Peabody,
+        William Bourn Oliver, 1799-1847. | literary remains of the late William B.
+        O. Peabody, D. D'',1],''lc_callnum_facet''=>[''B - Philosophy, Psychology,
+        Religion'',1,''B - Philosophy, Psychology, Religion:BV - Practical Theology'',1,''B
+        - Philosophy, Psychology, Religion:BV - Practical Theology:BV4000-4470 - Pastoral
+        theology'',1,''B - Philosophy, Psychology, Religion:BV - Practical Theology:BV4000-4470
+        - Pastoral theology:BV4200-4317 - Preaching. Homiletics'',1,''B - Philosophy,
+        Psychology, Religion:BV - Practical Theology:BV4000-4470 - Pastoral theology:BV4200-4317
+        - Preaching. Homiletics:BV4239-4317 - Sermons'',1,''C - Historical Sciences
+        (Archaeology, Genealogy)'',1,''C - Historical Sciences (Archaeology, Genealogy):CT
+        - Biography'',1,''C - Historical Sciences (Archaeology, Genealogy):CT - Biography:CT210-3150
+        - National biography'',1,''E-F - History of the Americas'',3,''E-F - History
+        of the Americas:E151-909 - United States'',3,''E-F - History of the Americas:E151-909
+        - United States:E171-183.9 - History'',1,''E-F - History of the Americas:E151-909
+        - United States:E171-183.9 - History:E171-180 - General'',1,''E-F - History
+        of the Americas:E151-909 - United States:E171-183.9 - History:E171-180 - General:E176-176.8
+        - Biography'',1,''E-F - History of the Americas:E151-909 - United States:E201-298
+        - The Revolution, 1775-1783'',1,''E-F - History of the Americas:E151-909 -
+        United States:E300-453 - Revolution to the Civil War, 1775/1783-1861'',2,''E-F
+        - History of the Americas:E151-909 - United States:E300-453 - Revolution to
+        the Civil War, 1775/1783-1861:E441-453 - Slavery in the United States. Antislavery
+        movements'',2,''J - Political Science'',2,''J - Political Science:JK - Political
+        Institutions (United States)'',2,''P - Language & Literature'',1,''P - Language
+        & Literature:PS - Americal Literature'',1,''P - Language & Literature:PS -
+        Americal Literature:PS1-3576 - American literature'',1,''P - Language & Literature:PS
+        - Americal Literature:PS1-3576 - American literature:PS700-3576 - Individual
+        authors'',1,''P - Language & Literature:PS - Americal Literature:PS1-3576
+        - American literature:PS700-3576 - Individual authors:PS991-3390 - 19th century'',1,''Q
+        - Science'',1,''Q - Science:QL - Zoology'',1,''Q - Science:QL - Zoology:QL1-355
+        - General (incl geographical distribution)'',1],''collection''=>[]},''facet_ranges''=>{},''facet_intervals''=>{},''facet_heatmaps''=>{}},''stats''=>{''stats_fields''=>{''pub_date_facet''=>{''min''=>1828.0,''max''=>1878.0,''count''=>12,''missing''=>0,''sum''=>22082.0,''sumOfSquares''=>4.0637118E7,''mean''=>1840.1666666666667,''stddev''=>15.248447511637094}}},''spellcheck''=>{''suggestions''=>[''bourn'',{''numFound''=>5,''startOffset''=>77,''endOffset''=>82,''origFreq''=>4946,''suggestion''=>[{''word''=>''born'',''freq''=>8736},{''word''=>''four'',''freq''=>81746},{''word''=>''court'',''freq''=>64436},{''word''=>''pour'',''freq''=>56402},{''word''=>''board'',''freq''=>52724}]},''oliver'',{''numFound''=>1,''startOffset''=>83,''endOffset''=>89,''origFreq''=>43098,''suggestion''=>[{''word''=>''river'',''freq''=>26620}]},''1799'',{''numFound''=>2,''startOffset''=>91,''endOffset''=>95,''origFreq''=>180476,''suggestion''=>[{''word''=>''1999'',''freq''=>187266},{''word''=>''1899'',''freq''=>134840}]},''1847'',{''numFound''=>5,''startOffset''=>96,''endOffset''=>100,''origFreq''=>47968,''suggestion''=>[{''word''=>''1947'',''freq''=>82826},{''word''=>''1887'',''freq''=>46486},{''word''=>''1848'',''freq''=>11206},{''word''=>''1849'',''freq''=>10522},{''word''=>''1846'',''freq''=>8238}]}],''correctlySpelled''=>true}}
+
+'
+    http_version: 
+  recorded_at: Mon, 28 Aug 2017 21:18:47 GMT
 recorded_with: VCR 3.0.3

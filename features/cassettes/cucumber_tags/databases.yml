@@ -4035,4 +4035,118 @@ http_interactions:
           }}
     http_version: 
   recorded_at: Thu, 24 Aug 2017 17:49:02 GMT
+- request:
+    method: get
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/select?rows=10&wt=ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 28 Aug 2017 21:25:32 GMT
+      Last-Modified:
+      - Mon, 28 Aug 2017 21:25:23 GMT
+      Etag:
+      - '"MWI3ZGMwMDAwMDAwMDAwMFNvbHI="'
+      Content-Type:
+      - text/plain;charset=utf-8
+      Content-Length:
+      - '13499'
+      Via:
+      - 1.1 da-prod-solr8.library.cornell.edu
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{''responseHeader''=>{''zkConnected''=>true,''status''=>0,''QTime''=>305,''params''=>{''rows''=>''10'',''wt''=>''ruby''}},''response''=>{''numFound''=>7755958,''start''=>0,''maxScore''=>1.4913617,''docs''=>[{''holdings_record_display''=>[''{"id":"10266454","modified_date":"20170713121355","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''9951177'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Cham
+        : Springer International Publishing : Imprint: Springer, 2018.''],''title_display''=>''Smart
+        Education and e-Learning 2017'',''fulltitle_display''=>''Smart Education and
+        e-Learning 2017'',''other_id_display''=>[''(WaSeSS)OCM1ssj0001819869'',''9951177'',''(OCoLC)988376566''],''url_access_json''=>[''{"providercode":"PRVAVX","dbcode":"0D9","description":"Full
+        text available from SpringerLink ebooks - Engineering (Contemporary) Connect
+        to text.","ssid":"ssj0001819869","url":"http://proxy.library.cornell.edu/login?url=https://link.springer.com/openurl?genre=book&isbn=978-3-319-59450-7"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=https://link.springer.com/openurl?genre=book&isbn=978-3-319-59450-7|Full
+        text available from SpringerLink ebooks - Engineering (Contemporary) Connect
+        to text.''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10268272","modified_date":"20170718141058","copy_number":null,"callnos":["Available
+        for the Library to Purchase"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"cts,rev","number":120,"name":"Library
+        Technical Services Review Shelves","library":null}]}''],''id''=>''9953080'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Amsterdam:
+        Elsevier Science Publishing Co Inc 2018''],''title_display''=>''Polymer Nanocomposites
+        for Electromagnetic Interference Shielding'',''fulltitle_display''=>''Polymer
+        Nanocomposites for Electromagnetic Interference Shielding'',''other_id_display''=>[''(CaONFJC)cou36310011'',''cou36310011'',''9953080'',''(OCoLC)994229320''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10232690","modified_date":"20170511125956","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''9914795'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Hoboken,
+        NJ : John Wiley & Sons Inc., 2018.''],''title_display''=>''Pitfalls in veterinary
+        surgery'',''fulltitle_display''=>''Pitfalls in veterinary surgery'',''other_id_display''=>[''(WaSeSS)OCM1ssj0001791897'',''9914795'',''(OCoLC)987011656''],''url_access_json''=>[''{"providercode":"PRVWIB","dbcode":"ZEEST","description":"Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text.","ssid":"ssj0001791897","url":"http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781119241706"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781119241706|Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text.''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10272097","modified_date":"20170816122005","copy_number":null,"callnos":["PN4888.O25
+        S35 2018"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"olin","number":99,"name":"Olin
+        Library","library":"Olin Library"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"book","item_id":"10347795","year":"","item_type_id":"3","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"10272097","recalls_placed":"0","create_date":"2017-08-16
+        12:20:47.0","item_barcode":"31924124194253","modify_date":"","perm_location":{"code":"olin","number":99,"name":"Olin
+        Library","library":"Olin Library"}}''],''id''=>''9957281'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Lanham
+        : Rowman & Littlefield, [2018]''],''fulltitle_display''=>''Evaluating media
+        bias'',''title_display''=>''Evaluating media bias'',''author_display''=>''Schiffer,
+        Adam Joseph, author'',''other_id_display''=>[''(OCoLC)1000491310''],''score''=>1.4913617},{''online''=>[''At
+        the Library''],''holdings_record_display''=>[''{"id":"10157679","modified_date":"20170308084926","copy_number":null,"callnos":[],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"olin","number":99,"name":"Olin
+        Library","library":"Olin Library"}]}''],''id''=>''9837448'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Oxford
+        : Voltaire Foundation, 2018.''],''title_display''=>''The circulation of music
+        and theatre in Europe in the age of enlightenment and revolution'',''fulltitle_display''=>''The
+        circulation of music and theatre in Europe in the age of enlightenment and
+        revolution'',''other_id_display''=>[''(CaONFJC)61282456'',''9837448''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10266709","modified_date":"20170713121454","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''9951432'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Singapore
+        : Springer Singapore : Imprint: Springer, 2018.''],''fulltitle_display''=>''Understanding
+        Digital Signal Processing'',''title_display''=>''Understanding Digital Signal
+        Processing'',''author_display''=>''Gazi, Orhan., author'',''other_id_display''=>[''(WaSeSS)OCM1ssj0001819905'',''9951432'',''(OCoLC)989037882''],''url_access_json''=>[''{"providercode":"PRVAVX","dbcode":"0D9","description":"Full
+        text available from SpringerLink ebooks - Engineering (Contemporary) Connect
+        to text.","ssid":"ssj0001819905","url":"http://proxy.library.cornell.edu/login?url=https://link.springer.com/openurl?genre=book&isbn=978-981-10-4961-3"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=https://link.springer.com/openurl?genre=book&isbn=978-981-10-4961-3|Full
+        text available from SpringerLink ebooks - Engineering (Contemporary) Connect
+        to text.''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10253919","modified_date":"20170622132138","copy_number":null,"callnos":["JV7398
+        .G55 2018"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"olin","number":99,"name":"Olin
+        Library","library":"Olin Library"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"book","item_id":"10321140","year":"","item_type_id":"3","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"10253919","recalls_placed":"0","create_date":"2017-06-22
+        13:22:05.0","item_barcode":"31924124304548","modify_date":"","perm_location":{"code":"olin","number":99,"name":"Olin
+        Library","library":"Olin Library"}}''],''id''=>''9937729'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''New
+        York : Oxford University Press, 2018.''],''fulltitle_display''=>''Global Latin(o)
+        Americanos : transoceanic diasporas and regional migrations'',''title_display''=>''Global
+        Latin(o) Americanos'',''subtitle_display''=>''transoceanic diasporas and regional
+        migrations'',''other_id_display''=>[''(OCoLC)964698381'',''9937729''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10249225","modified_date":"20170614104031","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
+        Resource","library":null}]}''],''id''=>''9932718'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Chichester,
+        West Sussex : John Wiley & Sons, Inc., 2018.''],''fulltitle_display''=>''Coastal
+        storms : processes and impacts'',''title_display''=>''Coastal storms'',''subtitle_display''=>''processes
+        and impacts'',''other_id_display''=>[''(WaSeSS)OCM1ssj0001786588'',''9932718'',''(OCoLC)965120543''],''url_access_json''=>[''{"providercode":"PRVWIB","dbcode":"ZEEST","description":"Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text.","ssid":"ssj0001786588","url":"http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118937099"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118937099|Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text.''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10297129","modified_date":"20170810140526","copy_number":null,"callnos":["GN60
+        .M32 2018"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"mann","number":69,"name":"Mann
+        Library","library":"Mann Library"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"book","item_id":"10345931","year":"","item_type_id":"3","chron":"","caption":"","holds_placed":"0","temp_location":{"code":"ent","number":25,"name":"Mann
+        Library New Book Shelf","library":"Mann Library"},"on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"10297129","recalls_placed":"0","create_date":"2017-08-10
+        14:05:45.0","item_barcode":"31924125063838","modify_date":"2017-08-22 20:49:31.0","perm_location":{"code":"mann","number":69,"name":"Mann
+        Library","library":"Mann Library"}}''],''id''=>''9982799'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''New
+        York : Oxford University Press, 2018.''],''fulltitle_display''=>''The alternative
+        introduction to biological anthropology'',''title_display''=>''The alternative
+        introduction to biological anthropology'',''author_display''=>''Marks, Jonathan
+        (Jonathan M.), 1955-'',''edition_display''=>[''Second edition.''],''other_id_display''=>[''(OCoLC)973733263'',''9982799''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10310829","modified_date":"20170817111657","copy_number":null,"callnos":["RA638
+        .T36 2018"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"mann","number":69,"name":"Mann
+        Library","library":"Mann Library"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"book","item_id":"10348424","year":"","item_type_id":"3","chron":"","caption":"","holds_placed":"0","temp_location":{"code":"ent","number":25,"name":"Mann
+        Library New Book Shelf","library":"Mann Library"},"on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"10310829","recalls_placed":"0","create_date":"2017-08-17
+        11:18:25.0","item_barcode":"31924125101745","modify_date":"2017-08-22 20:55:44.0","perm_location":{"code":"mann","number":69,"name":"Mann
+        Library","library":"Mann Library"}}''],''id''=>''9996811'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''[2018]''],''pub_date_facet''=>2018,''pub_info_display''=>[''New
+        York, NY : Oxford University Press, [2018]''],''fulltitle_display''=>''The
+        vaccine handbook : a practitioner\''s guide to maximizing use and efficacy
+        across the lifespan'',''title_display''=>''The vaccine handbook'',''author_display''=>''Tan,
+        Tina Q., author'',''subtitle_display''=>''a practitioner\''s guide to maximizing
+        use and efficacy across the lifespan'',''other_id_display''=>[''(OCoLC)956520331'',''9996811''],''score''=>1.4913617}]},''facet_counts''=>{''facet_queries''=>{},''facet_fields''=>{''format''=>[''Book'',6819542,''Journal/Periodical'',389607,''Microform'',355596,''Musical
+        Recording'',209051,''Thesis'',200057,''Video'',111314,''Musical Score'',97047,''Map
+        or Globe'',64512,''Manuscript/Archive'',15799,''Non-musical Recording'',10175],''online''=>[''At
+        the Library'',5823575,''Online'',2021807],''language_facet''=>[''English'',4790410,''German'',543457,''French'',334056,''Spanish'',285927,''Chinese'',263997,''Russian'',181245,''Italian'',149935,''Indonesian'',136045,''Japanese'',101938,''Vietnamese'',73927],''location_facet''=>[''Library
+        Annex'',2370249,''Olin Library'',1700852,''Kroch Library Asia'',599735,''Kroch
+        Library Rare & Manuscripts'',503170,''Law Library'',198271,''Music Library'',198138,''Mann
+        Library'',164453,''Uris Library'',149626,''ILR Library'',110106,''Mathematics
+        Library'',52586]},''facet_ranges''=>{},''facet_intervals''=>{},''facet_heatmaps''=>{}},''spellcheck''=>{''suggestions''=>[],''correctlySpelled''=>true}}
+
+'
+    http_version: 
+  recorded_at: Mon, 28 Aug 2017 21:25:32 GMT
 recorded_with: VCR 3.0.3

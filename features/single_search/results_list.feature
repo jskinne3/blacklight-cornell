@@ -5,7 +5,7 @@ Feature: Results list
 	I want to view a list of search results with various options.
 
 	Background:
-  @all_results_list @empty_search
+  @all_results_list @empty_search 
   Scenario: Empty search
     Given I literally go to search
     And I press 'Search'
@@ -191,8 +191,8 @@ Feature: Results list
 # Combinatorial Algorithms, Algorithmic Press
 # there is duplicate code here to defeat the 'circular dependency' problem,
 # which sometimes results in false failures.
+#@javascript
 @all_results_list
-@javascript
   Scenario: Perform an search with an unquoted call number
     Given I literally go to search
     When I fill in "q" with 'QA76.6 .C85 1972'
@@ -204,6 +204,7 @@ Feature: Results list
     And I sleep 8 seconds
     Then I should get bento results
     And I should see the text "Combinatorial algorithms"
+    And I sleep 8 seconds
 
 # Combinatorial Algorithms, Algorithmic Press
 # there is duplicate code here to defeat the 'circular dependency' problem,

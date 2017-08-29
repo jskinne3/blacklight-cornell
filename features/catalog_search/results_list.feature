@@ -281,6 +281,7 @@ Feature: Results list
     And I press 'search'
     Then I should get results
     And I should see the label '1 result'
+    And I sleep 4 seconds
 
 @all_results_list
 @next_facet

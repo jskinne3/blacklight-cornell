@@ -40,6 +40,7 @@ Feature: Search
     Then I should get results
     And I should see the label '1 result'
     And I should see the label 'AND Publisher: algorithmics'
+    And I sleep 8 seconds
 
 # Combinatorial Algorithms, Algorithmic Press
   @adv_search
@@ -59,6 +60,7 @@ Feature: Search
     Then I should get results
     And I should see the label '1 - 20 of'
     And I should see the label 'OR Publisher: algorithmics'
+    And I sleep 8 seconds
 
 # Combinatorial Algorithms, Algorithmic Press
   @adv_search
@@ -79,6 +81,7 @@ Feature: Search
     Then I should get results
     And I should see the label '1 - 20 of'
     And I should see the label 'NOT Publisher: springer'
+    And I sleep 8 seconds
 
 # Combinatorial Algorithms, Algorithmic Press
   @adv_search
@@ -124,6 +127,7 @@ Feature: Search
     Then I should get results
     And it should contain filter "Publisher" with value "Springer"
     And I should see the label 'Springer'
+    And I sleep 8 seconds
 
  @adv_search
  @all_search
@@ -136,6 +140,7 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label 'of 1'
+    And I sleep 8 seconds
 
  @adv_search
  @all_search
@@ -162,6 +167,7 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label '1 result'
+    And I sleep 8 seconds
 
  @adv_search
  @all_search
@@ -174,6 +180,7 @@ Feature: Search
     And I press 'advanced_search'
     Then I should get results
     And I should see the label 'of '
+    And I sleep 8 seconds
 
 # Frederick the great, by TCW Blanning
  @adv_search

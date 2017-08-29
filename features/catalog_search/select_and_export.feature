@@ -33,7 +33,7 @@ Feature: Select and export items from the result set
   Scenario: User needs to cite a record 
     Given I request the item view for 8696757
     And click on link "Cite"
-    And I sleep 8 seconds
+    And I sleep 12 seconds
     Then I should see the label '16th ed. Funk, Tom. Advanced Social Media Marketing: How to Lead, Launch, and Manage a Successful Social Media Program. Berkeley, CA: Apress, 2013. doi:10.1007/978-1-4302-4408-0.'
 
 #For a book with two authors, note that only the 
@@ -57,7 +57,7 @@ Feature: Select and export items from the result set
   Scenario: User needs to cite a record by a corporate author. # Geology report / corp author.
     Given I request the item view for 393971
     And click on link "Cite"
-    And I sleep 2 seconds
+    And I sleep 8 seconds
     Then I should see the label 'Chicago 16th ed. Memorial University of Newfoundland. Geology Report. St. John'
 
 @javascript
@@ -68,7 +68,7 @@ Feature: Select and export items from the result set
   Scenario: User needs to cite a record by a editors. #  Fashion game changers 
     Given I request the item view for 9448862 
     And click on link "Cite"
-    And I sleep 2 seconds
+    And I sleep 6 seconds
     Then I should see the label 'Chicago 16th ed. Modemuseum Provincie Antwerpen. Fashion Game Changers: Reinventing the 20th-Century Silhouette. Edited by Karen van Godtsenhoven, Miren Arzalluz, and Kaat Debo. London: Bloomsbury Visual Arts, an imprint of Bloomsbury Publishing PLC, 2016.'
 
 # DISCOVERYACCESS-1677 -Publication info isn't in citation even if it exists- 
@@ -81,6 +81,7 @@ Feature: Select and export items from the result set
   Scenario: User needs to cite a record 
     Given I request the item view for 8392067 
     And click on link "Cite"
+    And I sleep 6 seconds
     Then in modal '#ajax-modal' I should see label 'MLA 7th ed. Shannon, Timothy J. The Seven Years' War in North America: a Brief History with Documents. Boston: Bedford/St. Martin's, 2014. Print.'
 
 # DISCOVERYACCESS-1677 -Publication info isn't in citation even if it exists- 

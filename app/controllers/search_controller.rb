@@ -29,11 +29,16 @@ class SearchController < ApplicationController
       #      @query = objectify_query @query
             @query = @query
           end
+          x = BentoSearch::Results.new
           Rails.logger.debug("#{__FILE__}:#{__LINE__} #{@query}")
           #searcher = BentoSearch::MultiSearcher.new(:worldcat, :solr, :summon_bento, :web, :bestbet, :summonArticles)
           searcher = BentoSearch::MultiSearcher.new(:worldcat, :solr, :summon_bento, :bestbet, :digitalCollections, :libguides, :summonArticles)
           searcher.search(@query, :oq =>original_query,:per_page => 3)
-          @results = searcher.results
+          begin
+            @results = searcher.results
+          rescue
+            @results = searcher.results
+          end
 
           # Reset query to make it show up properly for the user on the results page
           @query = original_query
@@ -53,6 +58,7 @@ class SearchController < ApplicationController
               result.link = 'http://encompass.library.cornell.edu/cgi-bin/checkIP.cgi?access=gateway_standard%26url=' + result.link unless result.link.nil?
             end
           end
+          
           if !@results['summonArticles'].nil?
             @results['summonArticles'].each do |result|
               result.link = 'http://encompass.library.cornell.edu/cgi-bin/checkIP.cgi?access=gateway_standard%26url=' + result.link unless result.link.nil?

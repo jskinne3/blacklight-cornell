@@ -1,5 +1,9 @@
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit path_to(page_name)
+  begin
+    visit path_to(page_name)
+  rescue
+    visit path_to(page_name)
+  end
 end
 
 When /^(?:|I )fill in "([^"]*)" with ['"]([^'"]*)['"]$/ do |field, value|
@@ -38,7 +42,11 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )literally go to (.+)$/ do |page_name|
-  visit page_name
+  begin
+    visit page_name
+  rescue
+    visit page_name
+  end
 end
 
 Then /^(?:|I )should be on (.+)$/ do |page_name|

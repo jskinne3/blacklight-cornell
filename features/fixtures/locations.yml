@@ -46,3 +46,20 @@ hote:
     voyager_id: 43
     rmc_aeon: false
     hours_page: "ilr"
+
+mann_spec:
+  code: mann,spec
+  display_name: "Mann Library Special Collections (Non-Circulating)"
+  voyager_id: 73
+  rmc_aeon: false
+  mann_spec: true
+  hours_page: "mann"
+
+mann_href:
+  code: mann,href
+  display_name: "Mann Library Special Collections Reference(Non-Circulating)"
+  voyager_id: 77
+  rmc_aeon: false
+  mann_spec: true
+  hours_page: "mann"
+

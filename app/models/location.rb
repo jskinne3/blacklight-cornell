@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-  attr_accessible :code,:voyager_id,:display_name,:hours_page,:rmc_aeon
+  attr_accessible :code,:voyager_id,:display_name,:hours_page,:rmc_aeon,:mann_spec
 
 
   def self.help_page(code)
@@ -39,10 +39,17 @@ class Location < ActiveRecord::Base
   def self.mann_spec_eligible?(code)
     ret = false 
     code.delete!(' ')
-    return MANN_SPEC_SITES.include?(code)
-    #later ?
-    #rec = where("code = ?", code).rst
-    #rec ?  rec.mann_spec : ret
+    rec = where("code = ?", code).first
+    rec ?  rec.mann_spec : ret
   end
+
+  #def self.mann_spec_eligible?(code)
+  #  ret = false 
+  #  code.delete!(' ')
+  #  return MANN_SPEC_SITES.include?(code)
+    ##later ?
+    ##rec = where("code = ?", code).rst
+    ##rec ?  rec.mann_spec : ret
+  #end
 
 end

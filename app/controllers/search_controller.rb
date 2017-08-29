@@ -34,11 +34,7 @@ class SearchController < ApplicationController
           #searcher = BentoSearch::MultiSearcher.new(:worldcat, :solr, :summon_bento, :web, :bestbet, :summonArticles)
           searcher = BentoSearch::MultiSearcher.new(:worldcat, :solr, :summon_bento, :bestbet, :digitalCollections, :libguides, :summonArticles)
           searcher.search(@query, :oq =>original_query,:per_page => 3)
-          begin
-            @results = searcher.results
-          rescue
-            @results = searcher.results
-          end
+          @results = searcher.results
 
           # Reset query to make it show up properly for the user on the results page
           @query = original_query

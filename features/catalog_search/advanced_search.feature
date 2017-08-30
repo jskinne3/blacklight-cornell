@@ -63,10 +63,10 @@ Feature: Search
     And I sleep 8 seconds
 
 # Combinatorial Algorithms, Algorithmic Press
-#  @javascript
   @adv_search
   @all_search
   @searchpage
+  @javascript
   Scenario: Advanced search with title NOT publisher 
     When I literally go to advanced
     And the page title should be "Advanced Search - Cornell University Library Catalog"

@@ -30,7 +30,9 @@ class Location < ActiveRecord::Base
     code.delete!(' ')
     return where("code = ?", code).rmc_aeon 
   end
-
+ # mann,spec location code 73
+ # mann,spec location code 77
+ # mann,href location code 78
   MANN_SPEC_SITES  = [
     'mann,href',
     'mann,spec'

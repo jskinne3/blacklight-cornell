@@ -1,4 +1,5 @@
 BlacklightCornell::Application.routes.draw do
+
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
 
   match 'catalog/unapi', :to => "catalog#unapi", :as => 'unapi', :via => [:get]
@@ -152,7 +153,12 @@ end
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-
+  #
+  # Bookbag routes.
+  get 'book_bags/add/:id' => 'book_bags#add', :as => 'add_index', :constraints => { :id => /.+/}
+  #get 'backend/holdings_shorthm/:id' => 'backend#holdings_shorthm', :as => 'backend_holdings_shorthm', :constraints => { :id => /.+/}
+  get 'book_bags/delete/:id' => 'book_bags#delete', :as => 'delete_index', :constraints => { :id => /.+/}
+  get 'book_bags/index'
 
 
   mount BlacklightCornellRequests::Engine => '/request', :as => 'blacklight_cornell_request'

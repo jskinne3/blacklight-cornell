@@ -15,6 +15,11 @@
         <% end %>
         <% end %>
         <% if current_or_guest_user %>
+        <li>
+            <%= link_to "/book_bags/index", id:'bookmarks_nav' do %>
+            <span>Book Bag(<span data-role='bookmark-counter'><%= search_session[:bookbag_count] %></span>)</span>
+            <% end %>
+        </li>
         <%  @bookmarks = current_or_guest_user.bookmarks %>
         <li>
             <%= link_to bookmarks_path, id:'bookmarks_nav' do %>

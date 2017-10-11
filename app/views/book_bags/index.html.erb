@@ -6,14 +6,18 @@
         <meta name=bagstupid />
       <% end -%>
 
-<h2>BookBags#index</h2>
   <div class="item-tools">
     <ul class="fa-ul" id="item-tools">
       <%= render :partial => 'catalog/show_tools' %>
     </ul>
   </div>
-
-<%= @bms.join(" ") %>
+  <%# if part_of_catalog? %>
+     <div class="search-bar">
+       <div class="container">
+         <%= render :partial => 'shared/search_form' %>
+       </div>
+     </div>
+   <%# end %>
 
   <%= render_document_index %>
 

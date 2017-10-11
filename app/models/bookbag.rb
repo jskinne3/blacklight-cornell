@@ -1,9 +1,11 @@
 
 class Bookbag 
 
+  attr_accessor :bagname
+
   def initialize(bagname) 
     @r = Redis.new(port: 6379)
-    @bagname = bagname
+    @bagname = bagname unless bagname.nil?
   end
 
   def create(value)
@@ -17,6 +19,10 @@ class Bookbag
 
   def index
     @r.lrange(@bagname, 0, -1)
+  end
+
+  def count 
+    @r.llen(@bagname)
   end
 
 end

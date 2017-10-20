@@ -46,7 +46,7 @@
 
   <%= render partial: 'shared/ajax_modal' %>
 
-    <% if part_of_catalog? %>
+    <% if part_of_catalog?  or params[:controller] == 'book_bags'%>
       <div class="search-bar">
         <div class="container">
           <%= render :partial => 'shared/search_form' %>

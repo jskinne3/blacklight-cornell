@@ -158,7 +158,11 @@ end
   get 'book_bags/add/:id' => 'book_bags#add', :as => 'add_index', :constraints => { :id => /.+/}
   #get 'backend/holdings_shorthm/:id' => 'backend#holdings_shorthm', :as => 'backend_holdings_shorthm', :constraints => { :id => /.+/}
   get 'book_bags/delete/:id' => 'book_bags#delete', :as => 'delete_index', :constraints => { :id => /.+/}
-  get 'book_bags/index'
+  get 'book_bags/index(.:format)'
+  get 'book_bags/citation'
+  match 'book_bags/email', via: [:get, :post]
+  get 'book_bags/endnote(.:format)' => 'book_bags#endnote'
+  get 'book_bags/ris(.:format)' => 'book_bags#ris'
 
 
   mount BlacklightCornellRequests::Engine => '/request', :as => 'blacklight_cornell_request'

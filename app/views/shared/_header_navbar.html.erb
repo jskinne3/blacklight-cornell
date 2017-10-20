@@ -49,7 +49,7 @@
         <div class="library-link">
           <a href="http://www.library.cornell.edu">Cornell University Library</a>
         </div>
-        <% if !part_of_catalog? and params[:controller] != 'advanced_search'%>
+        <% if !part_of_catalog? and params[:controller] != 'advanced_search' and params[:controller] != 'book_bags'%>
           <h1>
           <!-- set the @heading in the controller for the specialized view -->
           <%= link_to(@heading, :controller => params[:controller], :action => "index") %>
@@ -58,7 +58,7 @@
           <h1><a href="<%=root_path%>">Library Catalog</a></h1>
         <%end%>
       </div>
-      <% if part_of_catalog? or params[:controller] == 'advanced_search' %>
+      <% if part_of_catalog? or params[:controller] == 'advanced_search'  or params[:controller] == 'book_bags' %>
       <%= render :partial=>'/user_util_links' %>
       <% end %>
     </div>

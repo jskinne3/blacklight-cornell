@@ -910,8 +910,12 @@ end
   # but now we removed mollom captcha.
   def email
     Rails.logger.info("es287_debug #{__FILE__}:#{__LINE__}  params  = #{params.inspect}")
-    docs = params[:id].split '|'
-    @response, @documents = fetch docs
+    bookmarks = token_or_current_or_guest_user.bookmarks
+    docs = bookmarks.collect { |b| b.document_id.to_s }
+    if docs.size > 500
+       docs = docs[0..500]
+    end
+    @response, @documents = fetch docs 
     if request.post?
       url_gen_params = {:host => request.host_with_port, :protocol => request.protocol, :params => params}
       if params[:to] && params[:to].match(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)

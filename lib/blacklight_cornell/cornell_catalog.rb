@@ -308,6 +308,7 @@ Blacklight::Catalog::SearchHistoryWindow = 12 # how many searches to save in ses
 
     # citation action
     def citation
+      Rails.logger.debug("es287_debug #{__FILE__}:#{__LINE__}  bookmark_ids = #{bookmark_ids.inspect}")
       @response, @documents = fetch(params[:id])
     end
 
@@ -315,14 +316,15 @@ Blacklight::Catalog::SearchHistoryWindow = 12 # how many searches to save in ses
     def endnote
       Rails.logger.info("es287_debug #{__FILE__}:#{__LINE__}  params = #{params.inspect}")
       if params[:id].nil?
-        bookmarks = token_or_current_or_guest_user.bookmarks
-        bookmark_ids = bookmarks.collect { |b| b.document_id.to_s }
-        Rails.logger.debug("es287_debug #{__FILE__}:#{__LINE__}  bookmark_ids = #{bookmark_ids.inspect}")
-        Rails.logger.debug("es287_debug #{__FILE__}:#{__LINE__}  bookmark_ids size  = #{bookmark_ids.size.inspect}")
-        if bookmark_ids.size > 500
-          bookmark_ids = bookmark_ids[0..500] 
-        end
-        @response, @documents = fetch(bookmark_ids, :per_page => 1000,:rows => 1000)
+        #bookmarks = token_or_current_or_guest_user.bookmarks
+        #bookmark_ids = bookmarks.collect { |b| b.document_id.to_s }
+        #Rails.logger.debug("es287_debug #{__FILE__}:#{__LINE__}  bookmark_ids = #{bookmark_ids.inspect}")
+        #Rails.logger.debug("es287_debug #{__FILE__}:#{__LINE__}  bookmark_ids size  = #{bookmark_ids.size.inspect}")
+        #if bookmark_ids.size > 500
+        #  bookmark_ids = bookmark_ids[0..500] 
+        #end
+        @response, @documents = action_documents()
+        #@response, @documents = fetch(bookmark_ids, :per_page => 1000,:rows => 1000)
         Rails.logger.debug("es287_debug #{__FILE__}:#{__LINE__}  @documents = #{@documents.size.inspect}")
       else
         @response, @documents = fetch(params[:id])
@@ -332,6 +334,16 @@ Blacklight::Catalog::SearchHistoryWindow = 12 # how many searches to save in ses
         format.ris      { render 'ris', :layout => false }
       end
     end
+
+    def action_documents
+      bookmarks = token_or_current_or_guest_user.bookmarks
+      bookmark_ids = bookmarks.collect { |b| b.document_id.to_s }
+      if bookmark_ids.size > 500
+        bookmark_ids = bookmark_ids[0..500] 
+      end
+      fetch(bookmark_ids, :per_page => 1000,:rows => 1000)
+    end 
+#
 
     # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
     # Added callnumber and location parameters to RecordMailer.email_record() call   jac244

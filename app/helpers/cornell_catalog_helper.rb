@@ -593,7 +593,6 @@ module CornellCatalogHelper
 	      sdate = holding[:ITEM_STATUS_DATE].to_s.slice(0,10)
 	      date = holding[:CURRENT_DUE_DATE].blank? ? holding[:ITEM_STATUS_DATE].to_s.slice(0,10)  : holding[:CURRENT_DUE_DATE].to_s.slice(0,10)  
 	      solri = items_solr[holding[:ITEM_ID].to_s]
-	      #binding.pry
 	      ##Rails.logger.debug "es287_debug #{__FILE__} #{__LINE__} solri = #{solri.inspect}\n"
 	      reqs = "0"
 	      #copy = solri['copy_number'].blank? ? "" : " c. #{solri['copy_number']}"

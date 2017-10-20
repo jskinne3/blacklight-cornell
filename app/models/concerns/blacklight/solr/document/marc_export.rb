@@ -172,45 +172,6 @@ module Blacklight::Solr::Document::MarcExport
       "%U" => "856.u",
       "%7" => "250.a"
     }
-  def ZZexport_as_endnote()
-    Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} #{__method__}")
-    marc_obj = to_marc
-    # TODO. This should be rewritten to guess
-    # from actual Marc instead, probably.
-    format_str = 'Generic'
-    
-    text = ''
-    text << "%0 #{ format_str }\n"
-    # If there is some reliable way of getting the language of a record we can add it here
-    #text << "%G #{record['language'].first}\n"
-    end_note_format.each do |key,value|
-      values = value.split(",")
-      first_value = values[0].split('.')
-      Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} first_value #{first_value}")
-      if values.length > 1
-        second_value = values[1].split('.')
-      else
-        second_value = []
-      end
-      
-      if marc_obj[first_value[0].to_s]
-        marc_obj.find_all{|f| (first_value[0].to_s) === f.tag}.each do |field|
-          if field[first_value[1]].to_s or field[second_value[1]].to_s
-            text << "#{key.gsub('_','')}"
-            if field[first_value[1]].to_s
-              text << " #{clean_end_punctuation(field[first_value[1]].to_s)}"
-            end
-            if field[second_value[1]].to_s
-              text << " #{clean_end_punctuation(field[second_value[1]].to_s)}"
-            end
-            text << "\n"
-          end
-        end
-      end
-    end
-    text
-  end
-
   def export_as_endnote()
     end_note_format = {
       "100.a" => "%A" ,

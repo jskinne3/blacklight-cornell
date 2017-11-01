@@ -864,11 +864,10 @@ Blacklight::Catalog::SearchHistoryWindow = 12 # how many searches to save in ses
   end
 
  def set_bag_name
-    user_session[:bookbag_count] = nil
-    if current_user
-      @bb = Bookbag.new(nil)
+    user_session[:bookbag_count] = nil unless user_session.nil?
+    if current_user && Bookbag.enabled?
       @id = current_user.email
-      @bb.bagname = "#{@id}-bookbag-default"
+      @bb = Bookbag.new("#{@id}-bookbag-default")
       user_session[:bookbag_count] = @bb.count
     end
   end

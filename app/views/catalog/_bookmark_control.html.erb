@@ -1,5 +1,5 @@
-  <%-bookmarks = false 
-     bookbags = true
+  <%-bookmarks = !Bookbag.enabled? 
+     bookbags = Bookbag.enabled?
   %>
 <% if current_or_guest_user %>
   <%-

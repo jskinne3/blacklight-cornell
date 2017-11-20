@@ -6,7 +6,7 @@ class SearchBuilder < Blacklight::SearchBuilder
 
 
   #self.solr_search_params_logic += [:sortby_title_when_browsing, :sortby_callnum]
-  self.default_processor_chain += [:sortby_title_when_browsing, :sortby_callnum, :advsearch]
+  self.default_processor_chain += [:sortby_title_when_browsing, :sortby_callnum, :advsearch,:add_latest_filter]
 
   def sortby_title_when_browsing user_parameters
     Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} user_parameters = #{user_parameters.inspect}")
@@ -29,6 +29,8 @@ class SearchBuilder < Blacklight::SearchBuilder
        user_parameters[:sort] = callnum_sortby.field
       Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} user_parameters = #{user_parameters.inspect}")
     end
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} user_parameters = #{user_parameters.inspect}")
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} blacklight_params = #{blacklight_params.inspect}")
   end
 
   def advsearch user_parameters
@@ -84,9 +86,41 @@ class SearchBuilder < Blacklight::SearchBuilder
         user_parameters["mm"] = "1"
       end
     end
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} user_parameters = #{user_parameters.inspect}")
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} blacklight_params = #{blacklight_params.inspect}")
   end
 
-
+  def add_latest_filter(params) 
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} blacklight params is a  #{blacklight_params.class.name}")
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} blacklight_params = #{blacklight_params.inspect}")
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} parameters = #{params.inspect}")
+    if !blacklight_params[:fq].nil?
+        params.merge!({:fq => blacklight_params[:fq]})
+    end
+    if blacklight_params[:acquired_dt]   && blacklight_params[:acquired_dt] == "yesterday"
+        if params[:fq] && !params[:fq].empty?
+          params[:fq] << 'acquired_dt:[NOW-2DAY TO NOW]'
+        else 
+          params.merge!({:fq => ['acquired_dt:[NOW-2DAY TO NOW]']})
+        end
+    end
+    if blacklight_params[:acquired_dt]   && blacklight_params[:acquired_dt] == "lastweek"
+        if params[:fq] && !params[:fq].empty?
+          params[:fq] << 'acquired_dt:[NOW-7DAY TO NOW]'
+        else 
+          params.merge!({:fq => ['acquired_dt:[NOW-7DAY TO NOW]']})
+        end
+    end
+    if blacklight_params[:acquired_dt]   && blacklight_params[:acquired_dt] == "lastmonth"
+        if params[:fq] && !params[:fq].empty?
+          params[:fq] << 'acquired_dt:[NOW-30DAY TO NOW]'
+        else 
+          params.merge!({:fq => ['acquired_dt:[NOW-30DAY TO NOW]']})
+        end
+    end
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} blacklight_params = #{blacklight_params.inspect}")
+    Rails.logger.info("es287_debug #{__FILE__} #{__LINE__} #{__method__} parameters = #{params.inspect}")
+  end
 
   def cjk_query_addl_params(params)
     if params && params.has_key?(:q)

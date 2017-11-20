@@ -63,6 +63,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'meta_request'
   gem 'awesome_print'
+  gem 'httplog'
 end
 
 group :test do

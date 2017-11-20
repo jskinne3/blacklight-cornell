@@ -62,3 +62,8 @@ BlacklightCornell::Application.configure do
 #   :room_name => 'Discovery and Access'
 # }
 end
+
+HttpLog.configure do |config|
+  config.enabled = true
+  config.logger = Rails.logger
+end

@@ -279,6 +279,8 @@ end
     config.add_index_field 'pub_info_display', :label => 'Publication'
     config.add_index_field 'edition_display', :label => 'Edition', :helper_method => :render_single_value
 
+    config.add_index_field 'acquired_dt', :label => 'Acquired Date:', :helper_methdod => :render_date_time
+
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
     # These 3 title related fields called directly in _show_metadata partial

@@ -29,10 +29,3 @@ class Logger
     "[#{timestamp}] #{severity}  (#{$$}) #{msg}\n"
   end
 end
-
-HttpLog.configure do |config|
-  config.enabled = true
-  config.log_response  = true
-  config.log_headers = true
-  config.logger = Rails.logger
-end

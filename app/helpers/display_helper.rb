@@ -606,7 +606,11 @@ end
       end
       formats.join('<br>').html_safe
   end
-
+  #render date time
+  def render_date_time field 
+    d = DateTime.strptime(field[:value])
+    val =  d.strftime("%Y %b %d")
+  end
   # Renders the format field values with applicable format icons
   def render_format_value args
     format = args[:document][args[:field]]

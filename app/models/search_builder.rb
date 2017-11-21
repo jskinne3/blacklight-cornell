@@ -99,9 +99,9 @@ class SearchBuilder < Blacklight::SearchBuilder
     end
     if blacklight_params[:acquired_dt]   && blacklight_params[:acquired_dt] == "yesterday"
         if params[:fq] && !params[:fq].empty?
-          params[:fq] << 'acquired_dt:[NOW-2DAY TO NOW]'
+          params[:fq] << 'acquired_dt:[NOW-1DAY TO NOW]'
         else 
-          params.merge!({:fq => ['acquired_dt:[NOW-2DAY TO NOW]']})
+          params.merge!({:fq => ['acquired_dt:[NOW-1DAY TO NOW]']})
         end
     end
     if blacklight_params[:acquired_dt]   && blacklight_params[:acquired_dt] == "lastweek"

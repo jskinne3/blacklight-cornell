@@ -1621,7 +1621,7 @@ include Blacklight::SearchHelper
   def latest sel 
      filter  =  case sel 
        when :yesterday then
-            "[NOW-2DAY TO NOW]"
+            "[NOW-1DAY TO NOW]"
        when :lastweek then
             "[NOW-7DAY TO NOW]"
        when :lastmonth then

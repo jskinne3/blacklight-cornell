@@ -617,8 +617,13 @@ end
   end
   
   def render_date_time field 
-    d = DateTime.strptime(field[:value])
-    val =  d.strftime("%Y %b %d")
+    val = '' 
+    if field[:value]
+      fv = field[:value].is_a?(Array) ? field[:value].first : field[:value]
+      d = DateTime.strptime(fv)
+      val =  d.strftime("%b %d, %Y")
+    end
+    val
   end
   # Renders the format field values with applicable format icons
   def render_format_value args

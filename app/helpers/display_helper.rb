@@ -606,7 +606,16 @@ end
       end
       formats.join('<br>').html_safe
   end
-  #render date time
+
+  def render_acquired_dt document
+     val = ''
+     if document['acquired_dt']
+       d = DateTime.strptime(document['acquired_dt'])
+       val =  "</br>Added: #{d.strftime('%b %d,%Y')}"
+    end
+   val.html_safe
+  end
+  
   def render_date_time field 
     d = DateTime.strptime(field[:value])
     val =  d.strftime("%Y %b %d")

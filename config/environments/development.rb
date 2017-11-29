@@ -49,12 +49,15 @@ BlacklightCornell::Application.configure do
   # needs to be in afterhook, as recommended by 
   # https://github.com/trusche/httplog/issues/41
   config.after_initialize do
-    HttpLog.configure do |config|
-      #config.enabled = true
-      config.enabled = false
-      config.log_response  = true
-      config.log_headers = true
-      config.logger = Rails.logger
+    HttpLog.configure do |hlconfig|
+      hlconfig.enabled = true
+      #hlconfig.enabled = false
+      hlconfig.log_response  = true
+      hlconfig.log_headers = true
+      hlconfig.logger = Rails.logger
+      #Limit logging based on URL patterns
+      hlconfig.url_whitelist_pattern = /solr/
+      hlconfig.url_blacklist_pattern = nil
     end
   end
   

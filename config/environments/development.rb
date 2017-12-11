@@ -56,7 +56,7 @@ BlacklightCornell::Application.configure do
       hlconfig.log_headers = true
       hlconfig.logger = Rails.logger
       #Limit logging based on URL patterns
-      hlconfig.url_whitelist_pattern = /solr/
+      hlconfig.url_whitelist_pattern = /holdings5/
       hlconfig.url_blacklist_pattern = nil
     end
   end

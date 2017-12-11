@@ -237,7 +237,14 @@ end
   }
 
     config.add_facet_field 'collection', :show => false
+    #config.add_facet_field 'acquired_dt', :date => true , label: "Acquired Date", limit: 5, sort: 'index'
 
+    config.add_facet_field 'acquired_dt_query',  :label => 'Acquired Date', :query => {
+      :last_1_day => { :label => 'Since yesterday ', :fq => "acquired_dt:[NOW-1DAY TO NOW ]"},
+      :last_1_week => { :label => 'Since last week', :fq => "acquired_dt:[NOW-7DAY TO NOW ]"},
+      :last_1_month => { :label => 'Since last month', :fq => "acquired_dt:[NOW-30DAY TO NOW ]"},
+      :last_1_years => { :label => 'Since last year', :fq => "acquired_dt:[NOW-1YEAR TO NOW]"}
+    } 
 
 
 
@@ -905,7 +912,7 @@ end
     config.add_sort_field 'title_sort asc, pub_date_sort desc', :label => 'title A-Z', :browse_default => true
     config.add_sort_field 'title_sort desc, pub_date_sort desc', :label => 'title Z-A'
     config.add_sort_field 'callnum_sort asc, pub_date_sort desc', :label => 'call number', :callnum_default => true
-    #config.add_sort_field 'acquired_dt desc, title_sort asc', :label => 'date acquired'
+    config.add_sort_field 'acquired_dt desc, title_sort asc', :label => 'acquired date'
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.

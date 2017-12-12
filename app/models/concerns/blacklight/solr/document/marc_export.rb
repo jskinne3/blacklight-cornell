@@ -622,21 +622,30 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
     edition_final = edition_data.blank? ? ""  : edition_data
     ty = setup_fmt(record)
     medium = setup_medium(record,ty)
+    citeas = setup_citeas(record,ty)
     Rails.logger.debug("es287_debug****#{__FILE__} #{__LINE__} #{__method__}medium=#{medium.inspect}")
+    if ty == 'MANSCPT'
     item = CiteProc::Item.new(
       :id => id,
       :type => ty,
-      :medium => medium,
-      :title => title,
-      :author => authors_final,
-      :editor => editors_final,
-      :issued => { 'literal' => issued },
-      :edition => edition_final,
-      :publisher => publisher ,
-      :DOI => doi_data,
-      :URL => ul,
-      'publisher-place' => publisher_place 
+      :title => citeas,
     )
+    else
+      item = CiteProc::Item.new(
+        :id => id,
+        :type => ty,
+        :medium => medium,
+        :title => title,
+        :author => authors_final,
+        :editor => editors_final,
+        :issued => { 'literal' => issued },
+        :edition => edition_final,
+        :publisher => publisher ,
+        :DOI => doi_data,
+        :URL => ul,
+      '  publisher-place' => publisher_place 
+      )
+    end
     Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} #{__method__} item=#{item.inspect}")
     Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} #{__method__} place=#{item.publisher_place.inspect}")
     cp << item
@@ -1255,6 +1264,16 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
               end
     Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} medium = #{medium.inspect}")
     medium
+  end 
+
+  def setup_citeas(record,ty)
+    citeas = ''
+    Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} ty = #{ty.inspect}")
+    if (ty == 'MANSCPT')
+        field = record.find{|f| f.tag == '524'}
+        citeas = field['a'] unless field.nil?
+    end
+  citeas.to_s
   end 
 
   def setup_fmt(record)

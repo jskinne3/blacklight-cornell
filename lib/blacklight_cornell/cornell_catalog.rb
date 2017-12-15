@@ -875,13 +875,6 @@ def check_params(params)
 
     
 
-  def sanitize(q)
-     if q.include?('<img')
-      redirect_to_root_path
-     else
-      return q
-     end
-  end
 
   def set_bag_name
      user_session[:bookbag_count] = nil unless user_session.nil?

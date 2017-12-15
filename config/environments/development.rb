@@ -50,8 +50,8 @@ BlacklightCornell::Application.configure do
   # https://github.com/trusche/httplog/issues/41
   config.after_initialize do
     HttpLog.configure do |hlconfig|
-      hlconfig.enabled = true
-      #hlconfig.enabled = false
+      #hlconfig.enabled = true
+      hlconfig.enabled = false
       hlconfig.log_response  = true
       hlconfig.log_headers = true
       hlconfig.logger = Rails.logger

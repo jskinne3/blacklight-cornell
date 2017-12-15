@@ -1,6 +1,5 @@
 # froozen_string_literal: true
 module CornellCatalogHelper
-include Blacklight::SearchHelper
  require "pp"
  require "maybe"
  require "htmlentities"
@@ -1616,26 +1615,6 @@ include Blacklight::SearchHelper
     @bb.index.any? {  |x|  x == value }
   end
 
-# Fetch latest acquired items 
-#  sel = :yesterday, :lastweek, :lastmonth
-  def latest sel 
-     filter  =  case sel 
-       when :yesterday then
-            "[NOW-1DAY TO NOW]"
-       when :lastweek then
-            "[NOW-7DAY TO NOW]"
-       when :lastmonth then
-            "[NOW-30DAY TO NOW]"
-       else 
-            "[NOW-30DAY TO NOW]"
-       end
-    logger.info "es287_debug #{__FILE__}:#{__LINE__}:#{__method__} filter = #{filter.inspect}"
-    zparams = ActionController::Parameters.new(utf8: "✓", q: "*",search_field: "all_fields", sort: "acquired_dt desc", fq: ["acquired_dt:#{filter}"] )
-    logger.info "es287_debug #{__FILE__}:#{__LINE__}:#{__method__} zparams = #{zparams.inspect}"
-    (@nresponse, @ndocument_list) = search_results(zparams)
-    logger.info "es287_debug #{__FILE__}:#{__LINE__}:#{__method__} @response = #{@response.inspect}"
-    @nresponse['response']['numFound']
-  end
 
 end 
 

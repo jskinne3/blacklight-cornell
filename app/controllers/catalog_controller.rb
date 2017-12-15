@@ -239,12 +239,6 @@ end
     config.add_facet_field 'collection', :show => false
     #config.add_facet_field 'acquired_dt', :date => true , label: "Acquired Date", limit: 5, sort: 'index'
 
-    config.add_facet_field 'acquired_dt_query',  :label => 'Acquired Date', :query => {
-      :last_1_day => { :label => 'Since yesterday ', :fq => "acquired_dt:[NOW-1DAY TO NOW ]"},
-      :last_1_week => { :label => 'Since last week', :fq => "acquired_dt:[NOW-7DAY TO NOW ]"},
-      :last_1_month => { :label => 'Since last month', :fq => "acquired_dt:[NOW-30DAY TO NOW ]"},
-      :last_1_years => { :label => 'Since last year', :fq => "acquired_dt:[NOW-1YEAR TO NOW]"}
-    } 
 
 
 
@@ -286,7 +280,6 @@ end
     config.add_index_field 'pub_info_display', :label => 'Publication'
     config.add_index_field 'edition_display', :label => 'Edition', :helper_method => :render_single_value
 
-    config.add_index_field 'acquired_dt', :label => 'Acquired Date:', :helper_methdod => :render_date_time
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -353,7 +346,6 @@ end
     config.add_show_field 'notes', :label => 'Notes', separator_options: { words_connector: '<br />', last_word_connector: '<br />' }
     config.add_show_field 'thesis_display', :label => 'Thesis'
     config.add_show_field 'indexes_display', :label => 'Indexes'
-    config.add_show_field 'acquired_dt', :label => 'Cataloged on', helper_method: :render_date_time
     config.add_show_field 'donor_display', :label => 'Donor'
     config.add_show_field 'url_bookplate_display', :label => 'Bookplate'
     config.add_show_field 'url_other_display', :label => 'Other online content'
@@ -912,7 +904,6 @@ end
     config.add_sort_field 'title_sort asc, pub_date_sort desc', :label => 'title A-Z', :browse_default => true
     config.add_sort_field 'title_sort desc, pub_date_sort desc', :label => 'title Z-A'
     config.add_sort_field 'callnum_sort asc, pub_date_sort desc', :label => 'call number', :callnum_default => true
-    config.add_sort_field 'acquired_dt desc, title_sort asc', :label => 'acquired date'
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.

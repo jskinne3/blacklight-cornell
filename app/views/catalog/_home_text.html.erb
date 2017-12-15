@@ -13,12 +13,6 @@
 
                     <li>Or <a href="http://www.library.cornell.edu/feedback">send us</a> comments or suggestions that may help us improve the Catalog.</li>
                 </ul>
-                <p> <%   ynew = "New since yesterday: #{latest(:yesterday)}" %> 
-                  <%= link_to (search_catalog_path + "?acquired_dt=yesterday&q=*&search_field=all_fields") do %> <%= ynew.html_safe %> <%  end %> </p>
-                <p> <%   wnew = "New since last week : #{latest(:lastweek)}" %> 
-                  <%= link_to (search_catalog_path + "?acquired_dt=lastweek&q=*&search_field=all_fields") do %> <%= wnew.html_safe %> <%  end %> </p>
-                <p> <%   mnew = "New since last month: #{latest(:lastmonth)}" %> 
-                  <%= link_to (search_catalog_path + "?acquired_dt=lastmonth&q=*&search_field=all_fields") do %> <%= mnew.html_safe %> <%  end %> </p>
                 <p>To search beyond Cornell holdings, follow the “Libraries Worldwide” link on the Catalog search results page, or connect directly to <a href="http://cornell.worldcat.org/">WorldCat Local</a>.</p>
             </div>
 

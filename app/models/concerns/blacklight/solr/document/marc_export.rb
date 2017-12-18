@@ -608,6 +608,7 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
     Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} #{__method__} publisher_place = #{publisher_place.inspect}")
     Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} #{__method__}dummy=#{dummy.inspect}")
     id = "id #{csl}"
+    Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} #{__method__}id=#{id.inspect}")
     ul = ''
     if !self['url_access_display'].blank?
        ul = self['url_access_display'].first.split('|').first
@@ -624,12 +625,21 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
     medium = setup_medium(record,ty)
     citeas = setup_citeas(record,ty)
     Rails.logger.debug("es287_debug****#{__FILE__} #{__LINE__} #{__method__}medium=#{medium.inspect}")
-    if ty == 'MANSCPT'
-    item = CiteProc::Item.new(
-      :id => id,
-      :type => ty,
-      'container-title' => citeas,
-    )
+    Rails.logger.debug("es287_debug****#{__FILE__} #{__LINE__} #{__method__}ty =#{ty.inspect}")
+    if ty == 'manuscript'
+     if id == 'id modern-language-association-7th-edition'     
+       item = CiteProc::Item.new(
+       :id => id,
+       :type => ty,
+       'title' => citeas,
+       )
+     else 
+       item = CiteProc::Item.new(
+       :id => id,
+       :type => ty,
+       'container-title' => citeas,
+       )
+     end
     else
       item = CiteProc::Item.new(
         :id => id,
@@ -1269,7 +1279,7 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
   def setup_citeas(record,ty)
     citeas = ''
     Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} ty = #{ty.inspect}")
-    if (ty == 'MANSCPT')
+    if (ty == 'manuscript')
         field = record.find{|f| f.tag == '524'}
         citeas = field['a'] unless field.nil?
     end
@@ -1577,7 +1587,7 @@ FACET_TO_CITEPROC_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
   "ELEC"=>"ELEC", "ENCYC"=>"ENCYC", "EQUA"=>"EQUA", "FIGURE"=>"FIGURE",
   "GEN"=>"GEN", "GOVDOC"=>"GOVDOC", "GRANT"=>"GRANT", "HEAR"=>"HEAR",
   "ICOMM"=>"ICOMM", "INPR"=>"INPR", "JFULL"=>"JFULL", "JOUR"=>"journal",
-  "LEGAL"=>"LEGAL", "Manuscript/Archive"=>"MANSCPT", "Map or Globe"=>"map", "MGZN"=>"MGZN",
+  "LEGAL"=>"LEGAL", "Manuscript/Archive"=>"manuscript", "Map or Globe"=>"map", "MGZN"=>"MGZN",
    "MPCT"=>"MPCT", "MULTI"=>"MULTI", "Musical Score"=>"MUSIC", "NEWS"=>"NEWS",
    "PAMP"=>"PAMP", "PAT"=>"PAT", "PCOMM"=>"PCOMM", "RPRT"=>"RPRT",
    "SER"=>"SER", "SLIDE"=>"SLIDE", "Non-musical Recording"=>"song", "Musical Recording"=>"song",

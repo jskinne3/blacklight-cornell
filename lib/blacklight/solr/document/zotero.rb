@@ -18,7 +18,6 @@ module Blacklight::Solr::Document::Zotero
 
   def generate_rdf_zotero
     about = "http://newcatalog.library.cornell.edu/catalog/#{id}"
-    title = "#{clean_end_punctuation(setup_title_info(to_marc))}"
     fmt = self['format'].first
     Rails.logger.debug "********es287_dev #{__FILE__} #{__LINE__} #{__method__} #{fmt.inspect}"
     ty = "book"
@@ -35,6 +34,7 @@ module Blacklight::Solr::Document::Zotero
       else
         "Book"
       end
+    title = generate_citeas_title(ty) 
     builder = Builder::XmlMarkup.new(:indent => 2,:margin => 4)
     builder.tag!("rdf:RDF",
     'xmlns:rdf' => "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -47,7 +47,7 @@ module Blacklight::Solr::Document::Zotero
     'xmlns:dcterms' =>"http://purl.org/dc/terms/") do
       builder.bib(tag.to_sym) do 
         builder.z(:itemType,"#{ty}")
-        builder.dc(:title, title.strip)
+        builder.dc(:title, title)
         generate_rdf_authors(builder,ty)
         generate_rdf_publisher(builder)
         generate_rdf_pubdate(builder)
@@ -83,6 +83,13 @@ module Blacklight::Solr::Document::Zotero
   end   
     #<dcterms:abstract>Backup of websites is often not considered until </dcterms:abstract>
     
+  def generate_citeas_title(ty)
+    Rails.logger.debug "********es287_dev #{__FILE__} #{__LINE__} #{__method__} #{ty.inspect}"
+    citeas = setup_citeas(to_marc,ty)
+    title = "#{clean_end_punctuation(setup_title_info(to_marc))}"
+    citeas.empty? ?  title.strip : citeas
+  end
+
   def generate_rdf_abstract(b)
     k = setup_abst_info(to_marc)
     b.dcterms(:abstract,k.join(' ')) unless k.blank?
@@ -192,6 +199,9 @@ module Blacklight::Solr::Document::Zotero
 
   def generate_rdf_authors(bld,ty)
     # Handle authors
+    if  ty == 'manuscript'
+      return ''   
+    end
     authors = get_all_authors(to_marc)
     relators =  get_contrib_roles(to_marc)
     Rails.logger.debug "********es287_dev #{__FILE__} #{__LINE__} #{__method__} relators #{relators.inspect}"

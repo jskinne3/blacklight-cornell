@@ -49,9 +49,26 @@ BlacklightCornell::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
+  # turn http logging on and off.
+  # needs to be in afterhook, as recommended by 
+  # https://github.com/trusche/httplog/issues/41
+  config.after_initialize do
+    HttpLog.configure do |hlconfig|
+      #hlconfig.enabled = true
+      hlconfig.enabled = false
+      hlconfig.log_response  = true
+      hlconfig.log_headers = true
+      hlconfig.logger = Rails.logger
+      #Limit logging based on URL patterns
+      hlconfig.url_whitelist_pattern = /holdings5/
+      hlconfig.url_blacklist_pattern = nil
+    end
+  end
+
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
   
   # this allows WEBrick to handle pipe symbols in query parameters
 #URI::DEFAULT_PARSER = URI::Parser.new(:UNRESERVED => URI::REGEXP::PATTERN::UNRESERVED + '|')

@@ -628,7 +628,7 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
     item = CiteProc::Item.new(
       :id => id,
       :type => ty,
-      :title => citeas,
+      'container-title' => citeas,
     )
     else
       item = CiteProc::Item.new(
@@ -643,7 +643,7 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
         :publisher => publisher ,
         :DOI => doi_data,
         :URL => ul,
-      '  publisher-place' => publisher_place 
+        'publisher-place' => publisher_place 
       )
     end
     Rails.logger.debug("es287_debug **** #{__FILE__} #{__LINE__} #{__method__} item=#{item.inspect}")

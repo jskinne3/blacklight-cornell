@@ -113,6 +113,15 @@ Feature: Select and export items from the result set
     And I sleep 6 seconds
     Then I should see the label 'MLA 7th ed. National Research Council. Beyond Six Billion: Forecasting the World's Population. Washington, D.C.: National Academy Press, 2000.'
 
+# DISCOVERYACCESS-3996 
+@all_select_and_export
+@javascript
+  Scenario: User needs to cite a record by a corporate author in MLA 8th,7th, and CSE, where medium has no subfield b.
+    Given I request the item view for 10064023 
+    And click on link "Cite"
+    And I sleep 6 seconds
+    Then I should see the label 'MLA 8th ed. Towira, Pimpaka. The Island Funeral. mosquitofilmsdistribution.com, 2015.'
+
 # MLA 8th edition
 @all_select_and_export
 @citations

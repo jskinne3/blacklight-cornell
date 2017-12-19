@@ -164,6 +164,7 @@ Feature: Select and export items from the result set
     Then I should see the label 'APA 6th ed. Memorial University of Newfoundland. Geology report. St. John'
 
 # DISCOVERYACCESS-2816 - Manuscript records should use cite as field
+# Because of citeas, all fields should be the same.
 @all_select_and_export
 @javascript
   Scenario: User needs to cite a manuscript record
@@ -171,6 +172,10 @@ Feature: Select and export items from the result set
     And click on link "Cite"
     And I sleep 2 seconds
     Then I should see the label 'MLA 8th ed. Ezra Cornell Papers, #1-1-1. Division of Rare and Manuscript Collections, Cornell University Library.'
+    Then I should see the label 'MLA 7th ed. Ezra Cornell Papers, #1-1-1. Division of Rare and Manuscript Collections, Cornell University Library.'
+    Then I should see the label 'Council of Science Editors Ezra Cornell papers, #1-1-1. Division of Rare and Manuscript Collections, Cornell University Library.'
+    Then I should see the label 'Chicago 17th ed. Ezra Cornell Papers, #1-1-1. Division of Rare and Manuscript Collections, Cornell University Library.'
+    Then I should see the label 'APA 6th ed. Ezra Cornell papers, #1-1-1. Division of Rare and Manuscript Collections, Cornell University Library.'
 
 # DISCOVERYACCESS-1677 -Publication info isn't in citation even if it exists- 
 # test regular expression that expunges characters from date field.

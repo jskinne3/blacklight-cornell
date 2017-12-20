@@ -627,7 +627,7 @@ FACET_TO_ENDNOTE_TYPE =  { "ABST"=>"ABST", "ADVS"=>"ADVS", "AGGR"=>"AGGR",
     Rails.logger.debug("es287_debug****#{__FILE__} #{__LINE__} #{__method__}medium=#{medium.inspect}")
     Rails.logger.debug("es287_debug****#{__FILE__} #{__LINE__} #{__method__}ty =#{ty.inspect}")
     if ty == 'manuscript'
-     if id == 'id modern-language-association-7th-edition'     
+     if csl == 'modern-language-association-7th-edition'     
        item = CiteProc::Item.new(
        :id => id,
        :type => ty,

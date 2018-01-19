@@ -43,7 +43,7 @@ class BentoSearch::DigitalCollectionsEngine
       if i['id'].start_with?('wa:') && i['wayback_url_tesim'].present?
         item.link = i['wayback_url_tesim'][0]
       else
-      item.link = "http://digital.library.cornell.edu/catalog/#{i['id']}"
+      item.link = "http://digital-stg.library.cornell.edu/catalog/#{i['id']}"
     end
       bento_results << item
     end

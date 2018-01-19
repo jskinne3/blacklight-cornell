@@ -40,6 +40,15 @@ class BentoSearch::DigitalCollectionsEngine
       if i['date_tesim'].present?
         item.publication_date = i['date_tesim'][0].to_s
       end
+      if i['creator_facet_tesim'].present?
+      i['creator_facet_tesim'].each do |a|
+        # author_display comes in as a combined name and date with a pipe-delimited display name.
+        # bento_search does some slightly odd things to author strings in order to display them,
+        # so the raw string coming out of *our* display value turns into nonsense by default
+        # Telling to create a new Author with an explicit 'display' value seems to work.
+        item.authors << BentoSearch::Author.new({:display => a})
+      end
+    end
       if i['id'].start_with?('wa:') && i['wayback_url_tesim'].present?
         item.link = i['wayback_url_tesim'][0]
       else

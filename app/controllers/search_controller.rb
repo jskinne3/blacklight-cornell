@@ -190,7 +190,7 @@ class SearchController < ApplicationController
       "http://encompass.library.cornell.edu/cgi-bin/checkIP.cgi?access=gateway_standard%26url=http://cornell.summon.serialssolutions.com/search?s.fvf=ContentType,Newspaper+Article&s.q=#{query}"
     elsif engine_id == 'digitalCollections'
       query = query.gsub('&', '%26')
-      "https://digital.library.cornell.edu/catalog?utf8=%E2%9C%93&q=#{query}&search_field=all_fields"
+      "https://digital-stg.library.cornell.edu/catalog?utf8=%E2%9C%93&q=#{query}&search_field=all_fields"
     elsif engine_id =='libguides'
       query = query.gsub('&', '%26')
       "http://guides.library.cornell.edu/srch.php?q=#{query}"

@@ -68,12 +68,24 @@ require 'capybara/email'
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
 # by default, uses selenium for javascript, but using poltergeist allows using phantomjs
-require 'capybara/poltergeist'
-Capybara.register_driver :poltergeist do |app|
-  #Capybara::Poltergeist::Driver.new(app, {debug: false})
-  Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path, timeout: 2.minute)
+#require 'capybara/poltergeist'
+#Capybara.register_driver :poltergeist do |app|
+#  #Capybara::Poltergeist::Driver.new(app, {debug: false})
+#  Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path, timeout: 2.minute)
+#end
+#Capybara.javascript_driver = :poltergeist
+
+Capybara.javascript_driver = :headless_chrome
+
+Capybara.register_driver :headless_chrome do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { args: %w[headless disable-gpu no-sandbox] }
+  )
+
+  Capybara::Selenium::Driver.new(app,
+                                 browser: :chrome,
+                                 desired_capabilities: capabilities)
 end
-Capybara.javascript_driver = :poltergeist
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 
 # your application behaves in the production environment, where an error page will 

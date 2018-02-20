@@ -78,7 +78,9 @@ group :test do
   gem 'vcr'
   gem 'capybara-email'
   gem 'therubyracer', '~> 0.12.2', :platforms => :ruby
-  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  #gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem "selenium-webdriver"
+  gem "chromedriver-helper"
 end
 
 gem 'jquery-rails'

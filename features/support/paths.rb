@@ -147,11 +147,11 @@ class Capybara::RackTest::Node
   end
 end
 
-class Capybara::Poltergeist::Node
-  def submit_form!
-    Capybara::Poltergeist::Form.new(driver, self.native).submit({})
-  end
-end
+#class Capybara::Poltergeist::Node
+#  def submit_form!
+#    Capybara::Poltergeist::Form.new(driver, self.native).submit({})
+#  end
+#end
 
 class Capybara::Node::Element
   def submit_form!

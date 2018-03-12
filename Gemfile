@@ -66,7 +66,6 @@ group :development, :test do
   gem 'awesome_print'
 end
 
-gem "puma"
 
 group :test do
   gem 'capybara'
@@ -83,9 +82,6 @@ group :test do
   gem 'vcr'
   gem 'capybara-email'
   gem 'therubyracer', '~> 0.12.2', :platforms => :ruby
-  #gem 'phantomjs', :require => 'phantomjs/poltergeist'
-  gem "selenium-webdriver"
-  gem "chromedriver-helper"
 end
 
 gem 'jquery-rails'

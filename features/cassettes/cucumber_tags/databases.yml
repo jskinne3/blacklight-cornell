@@ -2,154 +2,156 @@
 http_interactions:
 - request:
     method: get
-    uri: http://da-prod-solr8.library.cornell.edu/solr/blacklight/select?rows=10&wt=ruby
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/select?rows=10&wt=json
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 09 Jan 2018 16:06:17 GMT
+      - Mon, 12 Mar 2018 17:37:22 GMT
       Last-Modified:
-      - Tue, 09 Jan 2018 16:06:12 GMT
+      - Mon, 12 Mar 2018 17:37:13 GMT
       Etag:
-      - '"Zjk1N2E4MDAwMDAwMDAwMFNvbHI="'
+      - '"YWI4ODA0MDAwMDAwMDAwMFNvbHI="'
       Content-Type:
-      - text/plain;charset=utf-8
-      Content-Length:
-      - '13923'
+      - application/json; charset=UTF-8
       Via:
       - 1.1 da-prod-solr8.library.cornell.edu
       Vary:
       - Accept-Encoding
+      Content-Length:
+      - '3260'
       Connection:
       - close
     body:
-      encoding: UTF-8
-      string: '{''responseHeader''=>{''zkConnected''=>true,''status''=>0,''QTime''=>528,''params''=>{''rows''=>''10'',''wt''=>''ruby''}},''response''=>{''numFound''=>7817799,''start''=>0,''maxScore''=>1.50515,''docs''=>[{''holdings_record_display''=>[''{"id":"10398157","modified_date":"20171030143440","copy_number":null,"callnos":[],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"vet","number":133,"name":"Veterinary
-        Library (Schurman Hall)","library":"Veterinary Library"}]}''],''online''=>[''At
-        the Library''],''id''=>''10086886'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''[2019]''],''pub_date_facet''=>2019,''pub_info_display''=>[''New
-        York, NY : MHE, [2019]''],''fulltitle_display''=>''Laboratory manual for human
-        anatomy & physiology : cat version'',''title_display''=>''Laboratory manual
-        for human anatomy & physiology'',''author_display''=>''Martin, Terry R., author'',''subtitle_display''=>''cat
-        version'',''edition_display''=>[''Fourth edition.''],''other_id_display''=>[''(OCoLC)1001411720'',''10086886''],''score''=>1.50515},{''holdings_record_display''=>[''{"id":"8952778","modified_date":"20140731130217","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
-        Resource","library":null}]}''],''id''=>''8575328'',''format''=>[''Musical
-        Recording''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_display''=>[''2019''],''pub_date_facet''=>2019,''pub_info_display''=>[''Hong
-        Kong : Naxos Digital Services US Inc. 2019''],''title_display''=>''STRAVINKSY,
-        I.: Histoire du soldat (Horwitz, Blacher)'',''fulltitle_display''=>''STRAVINKSY,
-        I.: Histoire du soldat (Horwitz, Blacher)'',''other_id_display''=>[''(Naxos)PHIL06005'',''(OCoLC)885034837'',''8575328''],''url_access_json''=>[''{"providercode":"PRVAQU","dbcode":"CZN","description":"Available
+      encoding: ASCII-8BIT
+      string: '{"responseHeader":{"zkConnected":true,"status":0,"QTime":2061,"params":{"rows":"10","wt":"json"}},"response":{"numFound":7873260,"start":0,"maxScore":1.50515,"docs":[{"holdings_record_display":["{\"id\":\"10398157\",\"modified_date\":\"20180118145921\",\"copy_number\":null,\"callnos\":[\"QP44
+        .W74 2019\"],\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"vet\",\"number\":133,\"name\":\"Veterinary
+        Library (Schurman Hall)\",\"library\":\"Veterinary Library\"}]}"],"online":["At
+        the Library"],"item_record_display":["{\"copy_number\":\"1\",\"item_type_name\":\"book\",\"item_id\":\"10437367\",\"year\":\"\",\"item_type_id\":\"3\",\"chron\":\"\",\"caption\":\"\",\"holds_placed\":\"0\",\"temp_location\":\"0\",\"on_reserve\":\"N\",\"item_enum\":\"\",\"item_sequence_number\":\"1\",\"temp_item_type_id\":\"0\",\"mfhd_id\":\"10398157\",\"recalls_placed\":\"0\",\"create_date\":\"2018-01-18
+        14:59:58.0\",\"item_barcode\":\"31924125275325\",\"modify_date\":\"\",\"perm_location\":{\"code\":\"vet\",\"number\":133,\"name\":\"Veterinary
+        Library (Schurman Hall)\",\"library\":\"Veterinary Library\"}}"],"id":"10086886","format":["Book"],"language_display":["English."],"pub_date_display":["[2019]"],"pub_date_facet":2019,"pub_info_display":["New
+        York, NY : MHE, [2019]"],"fulltitle_display":"Laboratory manual for human
+        anatomy & physiology : cat version","title_display":"Laboratory manual for
+        human anatomy & physiology","author_display":"Martin, Terry R., author","subtitle_display":"cat
+        version","edition_display":["Fourth edition."],"other_id_display":["(OCoLC)1001411720","10086886"],"acquired_dt":"2018-01-18T00:00:00Z","score":1.50515},{"holdings_record_display":["{\"id\":\"10534501\",\"modified_date\":\"20180117144208\",\"copy_number\":null,\"callnos\":[\"P91.3
+        .L56 2019\"],\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"olin\",\"number\":99,\"name\":\"Olin
+        Library\",\"library\":\"Olin Library\"}]}"],"online":["At the Library"],"item_record_display":["{\"copy_number\":\"1\",\"item_type_name\":\"book\",\"item_id\":\"10436558\",\"year\":\"\",\"item_type_id\":\"3\",\"chron\":\"\",\"caption\":\"\",\"holds_placed\":\"0\",\"temp_location\":\"0\",\"on_reserve\":\"N\",\"item_enum\":\"\",\"item_sequence_number\":\"1\",\"temp_item_type_id\":\"0\",\"mfhd_id\":\"10534501\",\"recalls_placed\":\"0\",\"create_date\":\"2018-01-17
+        13:57:01.0\",\"item_barcode\":\"31924125253439\",\"modify_date\":\"\",\"perm_location\":{\"code\":\"olin\",\"number\":99,\"name\":\"Olin
+        Library\",\"library\":\"Olin Library\"}}"],"id":"10225622","format":["Book"],"language_display":["English."],"pub_date_display":["2019"],"pub_date_facet":2019,"pub_info_display":["Los
+        Angeles : SAGE, [2019]."],"fulltitle_display":"Qualitative communication research
+        methods","title_display":"Qualitative communication research methods","author_display":"Lindlof,
+        Thomas R., author","edition_display":["Fourth edition."],"other_id_display":["(OCoLC)1004424785","10225622"],"acquired_dt":"2018-01-17T00:00:00Z","score":1.50515},{"holdings_record_display":["{\"id\":\"8952778\",\"modified_date\":\"20140731130217\",\"copy_number\":null,\"callnos\":null,\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"serv,remo\",\"number\":128,\"name\":\"*Networked
+        Resource\",\"library\":null}]}"],"id":"8575328","format":["Musical Recording"],"online":["Online"],"language_display":["English."],"pub_date_display":["2019"],"pub_date_facet":2019,"pub_info_display":["Hong
+        Kong : Naxos Digital Services US Inc. 2019"],"title_display":"STRAVINKSY,
+        I.: Histoire du soldat (Horwitz, Blacher)","fulltitle_display":"STRAVINKSY,
+        I.: Histoire du soldat (Horwitz, Blacher)","other_id_display":["(Naxos)PHIL06005","(OCoLC)885034837","8575328"],"url_access_json":["{\"providercode\":\"PRVAQU\",\"dbcode\":\"CZN\",\"description\":\"Available
         at Naxos Music Library Connect to full text. Access limited to authorized
-        subscribers.","url":"http://proxy.library.cornell.edu/login?url=http://univportal.naxosmusiclibrary.com/catalogue/item.asp?cid=PHIL06005"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://univportal.naxosmusiclibrary.com/catalogue/item.asp?cid=PHIL06005|Available
+        subscribers.\",\"url\":\"http://proxy.library.cornell.edu/login?url=http://univportal.naxosmusiclibrary.com/catalogue/item.asp?cid=PHIL06005\"}"],"url_access_display":["http://proxy.library.cornell.edu/login?url=http://univportal.naxosmusiclibrary.com/catalogue/item.asp?cid=PHIL06005|Available
         at Naxos Music Library Connect to full text. Access limited to authorized
-        subscribers.''],''score''=>1.50515},{''holdings_record_display''=>[''{"id":"9595133","modified_date":"20151210140205","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
-        Resource","library":null}]}''],''id''=>''9259402'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_facet''=>2019,''pub_info_display''=>[''Paris
+        subscribers."],"score":1.50515},{"holdings_record_display":["{\"id\":\"9595133\",\"modified_date\":\"20151210140205\",\"copy_number\":null,\"callnos\":null,\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"serv,remo\",\"number\":128,\"name\":\"*Networked
+        Resource\",\"library\":null}]}"],"id":"9259402","format":["Book"],"online":["Online"],"language_display":["English."],"pub_date_facet":2019,"pub_info_display":["Paris
         : Organization for Economic Cooperation & Development London : Stationery
-        Office, The [Distributor]''],''fulltitle_display''=>''Preventing the Granting
-        of Treaty Benefits in Inappropriate Circumstances'',''title_display''=>''Preventing
-        the Granting of Treaty Benefits in Inappropriate Circumstances'',''author_display''=>''Organisation
-        for Economic Co-operation and Development, author'',''other_id_display''=>[''(WaSeSS)OCM1ssib022999930'',''(OCoLC)932052707'',''9259402''],''url_access_json''=>[''{"providercode":"PRVASG","dbcode":"RSO","description":"Full
-        text available from OECD iLibrary Connect to text.","ssid":"ssib022999930","url":"http://proxy.library.cornell.edu/login?url=http://dx.doi.org/10.1787/9789264241695-en"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://dx.doi.org/10.1787/9789264241695-en|Full
-        text available from OECD iLibrary Connect to text.''],''score''=>1.50515},{''holdings_record_display''=>[''{"id":"10180036","modified_date":"20170317120514","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
-        Resource","library":null}]}''],''id''=>''9860172'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_facet''=>2019,''pub_info_display''=>[''Wiley-Blackwell
-        [Imprint] Chichester : John Wiley & Sons, Limited''],''title_display''=>''The
-        Wiley Handbook of Evolutionary Neuroscience'',''fulltitle_display''=>''The
-        Wiley Handbook of Evolutionary Neuroscience'',''other_id_display''=>[''(WaSeSS)OCM1ssib026252388'',''9860172'',''(OCoLC)978380593''],''url_access_json''=>[''{"providercode":"PRVWIB","dbcode":"ZEEST","description":"Full
-        text available from Wiley Online Library UBCM All Obooks Connect to text.","ssid":"ssib026252388","url":"http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118316757"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118316757|Full
-        text available from Wiley Online Library UBCM All Obooks Connect to text.''],''acquired_dt''=>''2017-03-17T00:00:00Z'',''score''=>1.50515},{''holdings_record_display''=>[''{"id":"10169681","modified_date":"20170317111252","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
-        Resource","library":null}]}''],''id''=>''9849812'',''format''=>[''Book''],''online''=>[''Online''],''language_display''=>[''English.''],''pub_date_facet''=>2019,''pub_info_display''=>[''Wiley-Blackwell
-        [Imprint] Chichester : John Wiley & Sons, Limited''],''fulltitle_display''=>''The
-        Acts of the Apostles Through the Centuries'',''title_display''=>''The Acts
-        of the Apostles Through the Centuries'',''author_display''=>''Hornik, Heidi
-        J., author'',''other_id_display''=>[''(WaSeSS)OCM1ssib026525740'',''9849812'',''(OCoLC)978655050''],''url_access_json''=>[''{"providercode":"PRVWIB","dbcode":"ZEEST","description":"Full
-        text available from Wiley Online Library UBCM All Obooks Connect to text.","ssid":"ssib026525740","url":"http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118597873"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118597873|Full
-        text available from Wiley Online Library UBCM All Obooks Connect to text.''],''acquired_dt''=>''2017-03-17T00:00:00Z'',''score''=>1.50515},{''holdings_record_display''=>[''{"id":"10049931","modified_date":"20161213134354","copy_number":null,"callnos":null,"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"serv,remo","number":128,"name":"*Networked
-        Resource","library":null}]}''],''id''=>''9726061'',''format''=>[''Book''],''online''=>[''Online''],''pub_date_display''=>[''2019''],''pub_date_facet''=>2019,''pub_info_display''=>[''[S.l.]
-        : Sage Publications, Inc, 2019.''],''title_display''=>''SAGE Encyclopedia
-        of Theory'',''fulltitle_display''=>''SAGE Encyclopedia of Theory'',''other_id_display''=>[''(WaSeSS)OCM1ssib024484163'',''9726061'',''(OCoLC)965982045''],''url_access_json''=>[''{"providercode":"PRVSPB","dbcode":"AAIMZ","description":"Full
+        Office, The [Distributor]"],"fulltitle_display":"Preventing the Granting of
+        Treaty Benefits in Inappropriate Circumstances","title_display":"Preventing
+        the Granting of Treaty Benefits in Inappropriate Circumstances","author_display":"Organisation
+        for Economic Co-operation and Development, author","other_id_display":["(WaSeSS)OCM1ssib022999930","(OCoLC)932052707","9259402"],"url_access_json":["{\"providercode\":\"PRVASG\",\"dbcode\":\"RSO\",\"description\":\"Full
+        text available from OECD iLibrary Connect to text.\",\"ssid\":\"ssib022999930\",\"url\":\"http://proxy.library.cornell.edu/login?url=http://dx.doi.org/10.1787/9789264241695-en\"}"],"url_access_display":["http://proxy.library.cornell.edu/login?url=http://dx.doi.org/10.1787/9789264241695-en|Full
+        text available from OECD iLibrary Connect to text."],"score":1.50515},{"holdings_record_display":["{\"id\":\"10180036\",\"modified_date\":\"20170317120514\",\"copy_number\":null,\"callnos\":null,\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"serv,remo\",\"number\":128,\"name\":\"*Networked
+        Resource\",\"library\":null}]}"],"id":"9860172","format":["Book"],"online":["Online"],"language_display":["English."],"pub_date_facet":2019,"pub_info_display":["Wiley-Blackwell
+        [Imprint] Chichester : John Wiley & Sons, Limited"],"title_display":"The Wiley
+        Handbook of Evolutionary Neuroscience","fulltitle_display":"The Wiley Handbook
+        of Evolutionary Neuroscience","other_id_display":["(WaSeSS)OCM1ssib026252388","9860172","(OCoLC)978380593"],"url_access_json":["{\"providercode\":\"PRVWIB\",\"dbcode\":\"ZEEST\",\"description\":\"Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text.\",\"ssid\":\"ssib026252388\",\"url\":\"http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118316757\"}"],"url_access_display":["http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118316757|Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text."],"acquired_dt":"2017-03-17T00:00:00Z","score":1.50515},{"holdings_record_display":["{\"id\":\"10169681\",\"modified_date\":\"20170317111252\",\"copy_number\":null,\"callnos\":null,\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"serv,remo\",\"number\":128,\"name\":\"*Networked
+        Resource\",\"library\":null}]}"],"id":"9849812","format":["Book"],"online":["Online"],"language_display":["English."],"pub_date_facet":2019,"pub_info_display":["Wiley-Blackwell
+        [Imprint] Chichester : John Wiley & Sons, Limited"],"fulltitle_display":"The
+        Acts of the Apostles Through the Centuries","title_display":"The Acts of the
+        Apostles Through the Centuries","author_display":"Hornik, Heidi J., author","other_id_display":["(WaSeSS)OCM1ssib026525740","9849812","(OCoLC)978655050"],"url_access_json":["{\"providercode\":\"PRVWIB\",\"dbcode\":\"ZEEST\",\"description\":\"Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text.\",\"ssid\":\"ssib026525740\",\"url\":\"http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118597873\"}"],"url_access_display":["http://proxy.library.cornell.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118597873|Full
+        text available from Wiley Online Library UBCM All Obooks Connect to text."],"acquired_dt":"2017-03-17T00:00:00Z","score":1.50515},{"holdings_record_display":["{\"id\":\"10550697\",\"modified_date\":\"20180219134859\",\"copy_number\":null,\"callnos\":[\"GE180
+        .E546 2019\"],\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"mann\",\"number\":69,\"name\":\"Mann
+        Library\",\"library\":\"Mann Library\"}]}"],"online":["At the Library"],"item_record_display":["{\"copy_number\":\"1\",\"item_type_name\":\"book\",\"item_id\":\"10457363\",\"year\":\"\",\"item_type_id\":\"3\",\"chron\":\"\",\"caption\":\"\",\"holds_placed\":\"0\",\"temp_location\":\"0\",\"on_reserve\":\"N\",\"item_enum\":\"\",\"item_sequence_number\":\"1\",\"temp_item_type_id\":\"0\",\"mfhd_id\":\"10550697\",\"recalls_placed\":\"0\",\"create_date\":\"2018-02-19
+        13:49:48.0\",\"item_barcode\":\"31924125340632\",\"modify_date\":\"\",\"perm_location\":{\"code\":\"mann\",\"number\":69,\"name\":\"Mann
+        Library\",\"library\":\"Mann Library\"}}"],"id":"10241747","format":["Book"],"language_display":["English."],"pub_date_display":["[2019]"],"pub_date_facet":2019,"pub_info_display":["Los
+        Angeles : CQ Press, [2019]"],"fulltitle_display":"Environmental policy : new
+        directions for the twenty-first century","title_display":"Environmental policy","subtitle_display":"new
+        directions for the twenty-first century","edition_display":["Tenth edition."],"other_id_display":["(OCoLC)1005057455","10241747"],"acquired_dt":"2018-02-19T00:00:00Z","score":1.50515},{"holdings_record_display":["{\"id\":\"10049931\",\"modified_date\":\"20161213134354\",\"copy_number\":null,\"callnos\":null,\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"serv,remo\",\"number\":128,\"name\":\"*Networked
+        Resource\",\"library\":null}]}"],"id":"9726061","format":["Book"],"online":["Online"],"pub_date_display":["2019"],"pub_date_facet":2019,"pub_info_display":["[S.l.]
+        : Sage Publications, Inc, 2019."],"title_display":"SAGE Encyclopedia of Theory","fulltitle_display":"SAGE
+        Encyclopedia of Theory","other_id_display":["(WaSeSS)OCM1ssib024484163","9726061","(OCoLC)965982045"],"url_access_json":["{\"providercode\":\"PRVSPB\",\"dbcode\":\"AAIMZ\",\"description\":\"Full
         text available from SAGE Reference 2016 Encyclopedia Collection Connect to
-        text.","ssid":"ssib024484163","url":"http://proxy.library.cornell.edu/login?url=http://sk.sagepub.com/"}''],''url_access_display''=>[''http://proxy.library.cornell.edu/login?url=http://sk.sagepub.com/|Full
+        text.\",\"ssid\":\"ssib024484163\",\"url\":\"http://proxy.library.cornell.edu/login?url=http://sk.sagepub.com/\"}"],"url_access_display":["http://proxy.library.cornell.edu/login?url=http://sk.sagepub.com/|Full
         text available from SAGE Reference 2016 Encyclopedia Collection Connect to
-        text.''],''acquired_dt''=>''2016-12-13T00:00:00Z'',''score''=>1.50515},{''holdings_record_display''=>[''{"id":"10516962","modified_date":"20180104151237","copy_number":null,"callnos":["KF3197
-        .S26 2018"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"law,res","number":67,"name":"Law
-        Library Reserve","library":"Law Library"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"2hrres","item_id":"10431670","year":"","item_type_id":"26","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"10516962","recalls_placed":"0","create_date":"2018-01-04
-        10:34:13.0","item_barcode":"31924120772904","modify_date":"","perm_location":{"code":"law,res","number":67,"name":"Law
-        Library Reserve","library":"Law Library"}}''],''id''=>''10207704'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''St.
-        Paul, MN : West Academic Publishing, [2018]''],''fulltitle_display''=>''Trade
-        secret law (including the Defend Trade Secrets Act of 2016) in a nutshell'',''title_uniform_display''=>[''Trade
-        secret law in a nutshell|Trade secret law in a nutshell|Sandeen, Sharon K.,''],''title_display''=>''Trade
-        secret law (including the Defend Trade Secrets Act of 2016) in a nutshell'',''author_display''=>''Sandeen,
-        Sharon K., author'',''edition_display''=>[''Second edition.''],''other_id_display''=>[''(OCoLC)1007034056'',''10207704''],''acquired_dt''=>''2018-01-04T00:00:00Z'',''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10516853","modified_date":"20180103152542","copy_number":null,"callnos":["In
-        Process"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"law","number":63,"name":"Law
-        Library (Myron Taylor Hall)","library":"Law Library"}]}''],''online''=>[''At
-        the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"book","item_id":"10431529","year":"","item_type_id":"3","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"10516853","recalls_placed":"0","create_date":"2018-01-03
-        15:26:07.0","item_barcode":"31924120772466","modify_date":"","perm_location":{"code":"law","number":63,"name":"Law
-        Library (Myron Taylor Hall)","library":"Law Library"}}''],''id''=>''10207590'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Leiden
-        ; Boston : Brill Nijhoff, 2018.''],''fulltitle_display''=>''The impact of
-        the Convention on the Elimination of All Forms of Discrimination against Women
-        on the domestic legislation in Egypt'',''title_display''=>''The impact of
-        the Convention on the Elimination of All Forms of Discrimination against Women
-        on the domestic legislation in Egypt'',''author_display''=>''Salem, Nora,
-        1983-'',''other_id_display''=>[''(OCoLC)1007034665'',''10207590''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10267846","modified_date":"20170718080524","copy_number":null,"callnos":[],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"fine","number":31,"name":"Fine
-        Arts Library (B56 Sibley Hall)","library":"Fine Arts Library"}]}''],''online''=>[''At
-        the Library''],''id''=>''9952641'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''Oakland,
-        California : University of California Press, [2018]''],''fulltitle_display''=>''Los
-        Angeles documentary and the production of public history, 1958-1977'',''title_display''=>''Los
-        Angeles documentary and the production of public history, 1958-1977'',''author_display''=>''Glick,
-        Joshua, 1983- author'',''other_id_display''=>[''(OCoLC)981118070'',''(POOF2)7374'',''9952641''],''score''=>1.4913617},{''holdings_record_display''=>[''{"id":"10473098","modified_date":"20171130132935","copy_number":null,"callnos":["RA566
-        .L55 2018"],"notes":[],"holdings_desc":[],"recent_holdings_desc":[],"supplemental_holdings_desc":[],"index_holdings_desc":[],"locations":[{"code":"mann","number":69,"name":"Mann
-        Library","library":"Mann Library"}]}''],''online''=>[''At the Library''],''item_record_display''=>[''{"copy_number":"1","item_type_name":"book","item_id":"10401000","year":"","item_type_id":"3","chron":"","caption":"","holds_placed":"0","temp_location":"0","on_reserve":"N","item_enum":"","item_sequence_number":"1","temp_item_type_id":"0","mfhd_id":"10473098","recalls_placed":"0","create_date":"2017-11-30
-        13:29:57.0","item_barcode":"31924124427521","modify_date":"","perm_location":{"code":"mann","number":69,"name":"Mann
-        Library","library":"Mann Library"}}''],''id''=>''10162956'',''format''=>[''Book''],''language_display''=>[''English.''],''pub_date_display''=>[''2018''],''pub_date_facet''=>2018,''pub_info_display''=>[''New
-        York, NY : Oxford University Press, 2018.''],''fulltitle_display''=>''Environmental
-        health science : recognition, evaluation, and control of chemical health hazards'',''title_display''=>''Environmental
-        health science'',''author_display''=>''Lippmann, Morton, author'',''subtitle_display''=>''recognition,
-        evaluation, and control of chemical health hazards'',''edition_display''=>[''Second
-        edition.''],''other_id_display''=>[''(OCoLC)980858571'',''10162956''],''acquired_dt''=>''2017-11-30T00:00:00Z'',''score''=>1.4913617}]},''facet_counts''=>{''facet_queries''=>{},''facet_fields''=>{''format''=>[''Book'',6868848,''Journal/Periodical'',391352,''Microform'',355610,''Musical
-        Recording'',215250,''Thesis'',200217,''Video'',115001,''Musical Score'',97341,''Map
-        or Globe'',64578,''Manuscript/Archive'',16091,''Non-musical Recording'',10192],''online''=>[''At
-        the Library'',5849703,''Online'',2057629],''language_facet''=>[''English'',4823320,''German'',536632,''French'',335736,''Spanish'',287973,''Chinese'',264860,''Russian'',181812,''Italian'',150589,''Indonesian'',137571,''Japanese'',102679,''Vietnamese'',75216],''location_facet''=>[''Library
-        Annex'',2384514,''Olin Library'',1697424,''Kroch Library Asia'',606558,''Kroch
-        Library Rare & Manuscripts'',505894,''Music Library'',199123,''Law Library'',198804,''Mann
-        Library'',164763,''Uris Library'',149178,''ILR Library'',110424,''Mathematics
-        Library'',52662]},''facet_ranges''=>{},''facet_intervals''=>{},''facet_heatmaps''=>{}},''spellcheck''=>{''suggestions''=>[],''correctlySpelled''=>true}}
+        text."],"acquired_dt":"2016-12-13T00:00:00Z","score":1.50515},{"holdings_record_display":["{\"id\":\"10569023\",\"modified_date\":\"20180216105352\",\"copy_number\":null,\"callnos\":[\"HQ1061
+        .A33 2018\"],\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"mann\",\"number\":69,\"name\":\"Mann
+        Library\",\"library\":\"Mann Library\"}]}"],"online":["At the Library"],"item_record_display":["{\"copy_number\":\"1\",\"item_type_name\":\"book\",\"item_id\":\"10456193\",\"year\":\"\",\"item_type_id\":\"3\",\"chron\":\"\",\"caption\":\"\",\"holds_placed\":\"0\",\"temp_location\":\"0\",\"on_reserve\":\"N\",\"item_enum\":\"\",\"item_sequence_number\":\"1\",\"temp_item_type_id\":\"0\",\"mfhd_id\":\"10569023\",\"recalls_placed\":\"0\",\"create_date\":\"2018-02-16
+        10:54:02.0\",\"item_barcode\":\"31924125316947\",\"modify_date\":\"\",\"perm_location\":{\"code\":\"mann\",\"number\":69,\"name\":\"Mann
+        Library\",\"library\":\"Mann Library\"}}"],"id":"10260945","format":["Book"],"language_display":["English."],"pub_date_display":["2018"],"pub_date_facet":2018,"pub_info_display":["Abingdon,
+        Oxon : Routledge, 2018."],"fulltitle_display":"Addressing the sexual rights
+        of older people : theory, policy and practice","title_display":"Addressing
+        the sexual rights of older people","subtitle_display":"theory, policy and
+        practice","other_id_display":["(OCoLC)1013937771","10260945"],"acquired_dt":"2018-02-16T00:00:00Z","score":1.4913617},{"holdings_record_display":["{\"id\":\"10546637\",\"modified_date\":\"20180130103849\",\"copy_number\":null,\"callnos\":[\"KFN1725.5.I4
+        C47 2018\"],\"notes\":[],\"holdings_desc\":[],\"recent_holdings_desc\":[],\"supplemental_holdings_desc\":[],\"index_holdings_desc\":[],\"locations\":[{\"code\":\"law\",\"number\":63,\"name\":\"Law
+        Library (Myron Taylor Hall)\",\"library\":\"Law Library\"}]}"],"online":["At
+        the Library"],"item_record_display":["{\"copy_number\":\"1\",\"item_type_name\":\"book\",\"item_id\":\"10445496\",\"year\":\"\",\"item_type_id\":\"3\",\"chron\":\"\",\"caption\":\"\",\"holds_placed\":\"0\",\"temp_location\":\"0\",\"on_reserve\":\"N\",\"item_enum\":\"\",\"item_sequence_number\":\"1\",\"temp_item_type_id\":\"0\",\"mfhd_id\":\"10546637\",\"recalls_placed\":\"0\",\"create_date\":\"2018-01-30
+        10:39:32.0\",\"item_barcode\":\"31924123516431\",\"modify_date\":\"\",\"perm_location\":{\"code\":\"law\",\"number\":63,\"name\":\"Law
+        Library (Myron Taylor Hall)\",\"library\":\"Law Library\"}}"],"id":"10237526","format":["Book"],"language_display":["English."],"pub_date_display":["[2018]"],"pub_date_facet":2018,"pub_info_display":["Lanham,
+        Maryland  : Lexington Books, [2018]"],"fulltitle_display":"The impeachment
+        of Chief Justice David Brock : judicial independence and civic populism","title_display":"The
+        impeachment of Chief Justice David Brock","author_display":"Cerullo, John
+        J., 1949- author","subtitle_display":"judicial independence and civic populism","other_id_display":["(OCoLC)1002115984","10237526"],"acquired_dt":"2018-01-30T00:00:00Z","score":1.4913617}]},"facet_counts":{"facet_queries":{},"facet_fields":{"format":["Book",6911184,"Journal/Periodical",396387,"Microform",355600,"Musical
+        Recording",220246,"Thesis",200274,"Video",117599,"Musical Score",97505,"Map
+        or Globe",64637,"Manuscript/Archive",16206,"Non-musical Recording",10203],"online":["At
+        the Library",5864518,"Online",2098483],"language_facet":["English",4870119,"German",537540,"French",336587,"Spanish",288924,"Chinese",266769,"Russian",183089,"Italian",151070,"Indonesian",137761,"Japanese",103086,"Vietnamese",75421],"location_facet":["Library
+        Annex",2391943,"Olin Library",1695917,"Kroch Library Asia",610523,"Kroch Library
+        Rare & Manuscripts",507822,"Music Library",199889,"Law Library",199276,"Mann
+        Library",164936,"Uris Library",150018,"ILR Library",110519,"Mathematics Library",52709]},"facet_ranges":{},"facet_intervals":{},"facet_heatmaps":{}},"spellcheck":{"suggestions":[],"correctlySpelled":true}}
 
 '
     http_version: 
-  recorded_at: Tue, 09 Jan 2018 16:06:18 GMT
+  recorded_at: Mon, 12 Mar 2018 17:37:24 GMT
 - request:
     method: get
-    uri: http://da-prod-solr8.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Anthropology%22&wt=json
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Anthropology%22&wt=json
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      - HTTPClient/1.0 (2.8.3, ruby 2.3.1 (2016-04-26))
       Accept:
       - "*/*"
       Date:
-      - Tue, 09 Jan 2018 16:06:18 GMT
+      - Mon, 12 Mar 2018 17:37:24 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 09 Jan 2018 16:06:18 GMT
+      - Mon, 12 Mar 2018 17:37:24 GMT
       Last-Modified:
-      - Tue, 09 Jan 2018 16:06:12 GMT
+      - Mon, 12 Mar 2018 17:37:13 GMT
       Etag:
-      - '"Zjk1N2E4MDAwMDAwMDAwMFNvbHI="'
+      - '"YzRiODA0MDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
-      - '21073'
+      - '21075'
       Via:
-      - 1.1 da-prod-solr8.library.cornell.edu
+      - 1.1 da-prod-solr9.library.cornell.edu
       Vary:
       - Accept-Encoding
       Connection:
@@ -161,7 +163,7 @@ http_interactions:
           "responseHeader":{
             "zkConnected":true,
             "status":0,
-            "QTime":75,
+            "QTime":31,
             "params":{
               "q":"\"Anthropology\"",
               "indent":"true",
@@ -187,7 +189,7 @@ http_interactions:
                 "fulltitle_display":"Bibliography of Asian studies",
                 "summary_display":["No full text. Chiefly scholarly. Indexes articles and book chapters, including many journals not indexed elsewhere. Covers primarily humanities and social sciences for East, South, and Southeast Asia. Indexes publications from 1977-present. Primarily English language. Also known as BAS."],
                 "url_access_display":["http://resolver.library.cornell.edu/misc/abp0999"],
-                "url_access_json":["{\"providercode\":\"PRVAYN\",\"dbcode\":\"AOL\",\"url\":\"http://resolver.library.cornell.edu/misc/abp0999\"}"],
+                "url_access_json":["{\"providercode\":\"PRVAYN\",\"dbcode\":\"BALTR\",\"url\":\"http://resolver.library.cornell.edu/misc/abp0999\"}"],
                 "sixfivethree":["World Regions and Diasporas",
                   "South and Southeast Asia",
                   "East Asia",
@@ -435,37 +437,37 @@ http_interactions:
                   "Theater, Film and Television"]}]
           }}
     http_version: 
-  recorded_at: Tue, 09 Jan 2018 16:06:18 GMT
+  recorded_at: Mon, 12 Mar 2018 17:37:24 GMT
 - request:
     method: get
-    uri: http://da-prod-solr8.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Anthropology%20(Core)%22&wt=json
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Anthropology%20(Core)%22&wt=json
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      - HTTPClient/1.0 (2.8.3, ruby 2.3.1 (2016-04-26))
       Accept:
       - "*/*"
       Date:
-      - Tue, 09 Jan 2018 16:06:18 GMT
+      - Mon, 12 Mar 2018 17:37:24 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 09 Jan 2018 16:06:18 GMT
+      - Mon, 12 Mar 2018 17:37:24 GMT
       Last-Modified:
-      - Tue, 09 Jan 2018 16:06:12 GMT
+      - Mon, 12 Mar 2018 17:37:13 GMT
       Etag:
-      - '"Zjk1N2E4MDAwMDAwMDAwMFNvbHI="'
+      - '"ZmU5ZmY4MDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
       - '3816'
       Via:
-      - 1.1 da-prod-solr8.library.cornell.edu
+      - 1.1 da-prod-solr7.library.cornell.edu
       Vary:
       - Accept-Encoding
       Connection:
@@ -477,7 +479,7 @@ http_interactions:
           "responseHeader":{
             "zkConnected":true,
             "status":0,
-            "QTime":86,
+            "QTime":24,
             "params":{
               "q":"\"Anthropology (Core)\"",
               "indent":"true",
@@ -518,31 +520,31 @@ http_interactions:
                   "Sociology and Rural Development (Core)"]}]
           }}
     http_version: 
-  recorded_at: Tue, 09 Jan 2018 16:06:18 GMT
+  recorded_at: Mon, 12 Mar 2018 17:37:24 GMT
 - request:
     method: get
-    uri: http://da-prod-solr8.library.cornell.edu/solr/blacklight/database?id=5366869&indent=true&wt=json
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/database?id=5366869&indent=true&wt=json
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      - HTTPClient/1.0 (2.8.3, ruby 2.3.1 (2016-04-26))
       Accept:
       - "*/*"
       Date:
-      - Tue, 09 Jan 2018 16:06:19 GMT
+      - Mon, 12 Mar 2018 17:37:24 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 09 Jan 2018 16:06:19 GMT
+      - Mon, 12 Mar 2018 17:37:24 GMT
       Last-Modified:
-      - Tue, 09 Jan 2018 16:06:12 GMT
+      - Mon, 12 Mar 2018 17:37:13 GMT
       Etag:
-      - '"Zjk1N2E4MDAwMDAwMDAwMFNvbHI="'
+      - '"YWI4ODA0MDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
@@ -560,12 +562,12 @@ http_interactions:
           "responseHeader":{
             "zkConnected":true,
             "status":0,
-            "QTime":7,
+            "QTime":8,
             "params":{
               "indent":"true",
               "id":"5366869",
               "wt":"json"}},
-          "response":{"numFound":1,"start":0,"maxScore":13.675568,"docs":[
+          "response":{"numFound":1,"start":0,"maxScore":13.898209,"docs":[
               {
                 "id":"5366869",
                 "title_display":"AnthroSource",
@@ -582,37 +584,37 @@ http_interactions:
                   "Anthropology (Core)"]}]
           }}
     http_version: 
-  recorded_at: Tue, 09 Jan 2018 16:06:19 GMT
+  recorded_at: Mon, 12 Mar 2018 17:37:24 GMT
 - request:
     method: get
-    uri: http://da-prod-solr8.library.cornell.edu/solr/blacklight/databases?defType=dismax&indent=true&q=MLA&wt=json
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/databases?defType=dismax&indent=true&q=MLA&wt=json
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      - HTTPClient/1.0 (2.8.3, ruby 2.3.1 (2016-04-26))
       Accept:
       - "*/*"
       Date:
-      - Tue, 09 Jan 2018 16:06:31 GMT
+      - Mon, 12 Mar 2018 17:37:31 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 09 Jan 2018 16:06:31 GMT
+      - Mon, 12 Mar 2018 17:37:31 GMT
       Last-Modified:
-      - Tue, 09 Jan 2018 16:06:21 GMT
+      - Mon, 12 Mar 2018 17:37:23 GMT
       Etag:
-      - '"NDU1N2E4MDAwMDAwMDAwMFNvbHI="'
+      - '"ZTRiODA0MDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
-      - '3084'
+      - '3086'
       Via:
-      - 1.1 da-prod-solr8.library.cornell.edu
+      - 1.1 da-prod-solr9.library.cornell.edu
       Vary:
       - Accept-Encoding
       Connection:
@@ -624,13 +626,13 @@ http_interactions:
           "responseHeader":{
             "zkConnected":true,
             "status":0,
-            "QTime":40,
+            "QTime":347,
             "params":{
               "q":"MLA",
               "defType":"dismax",
               "indent":"true",
               "wt":"json"}},
-          "response":{"numFound":3,"start":0,"maxScore":620137.9,"docs":[
+          "response":{"numFound":3,"start":0,"maxScore":632076.75,"docs":[
               {
                 "id":"6961751",
                 "title_display":"MLA directory of periodicals",
@@ -661,35 +663,35 @@ http_interactions:
                   "Newspapers, Magazines and Current Events"]}]
           }}
     http_version: 
-  recorded_at: Tue, 09 Jan 2018 16:06:31 GMT
+  recorded_at: Mon, 12 Mar 2018 17:37:32 GMT
 - request:
     method: get
-    uri: http://da-prod-solr8.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Images%22&wt=json
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Images%22&wt=json
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      - HTTPClient/1.0 (2.8.3, ruby 2.3.1 (2016-04-26))
       Accept:
       - "*/*"
       Date:
-      - Tue, 09 Jan 2018 16:06:36 GMT
+      - Mon, 12 Mar 2018 17:37:34 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 09 Jan 2018 16:06:36 GMT
+      - Mon, 12 Mar 2018 17:37:34 GMT
       Last-Modified:
-      - Tue, 09 Jan 2018 16:06:21 GMT
+      - Mon, 12 Mar 2018 17:37:23 GMT
       Etag:
-      - '"NDU1N2E4MDAwMDAwMDAwMFNvbHI="'
+      - '"NDE5ZmY4MDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - application/json; charset=UTF-8
       Via:
-      - 1.1 da-prod-solr8.library.cornell.edu
+      - 1.1 da-prod-solr7.library.cornell.edu
       Vary:
       - Accept-Encoding
       Connection:
@@ -703,7 +705,7 @@ http_interactions:
           "responseHeader":{
             "zkConnected":true,
             "status":0,
-            "QTime":77,
+            "QTime":106,
             "params":{
               "q":"\"Images\"",
               "indent":"true",
@@ -1104,37 +1106,37 @@ http_interactions:
                   "Social Sciences"]}]
           }}
     http_version: 
-  recorded_at: Tue, 09 Jan 2018 16:06:36 GMT
+  recorded_at: Mon, 12 Mar 2018 17:37:34 GMT
 - request:
     method: get
-    uri: http://da-prod-solr8.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Images%20(Core)%22&wt=json
+    uri: http://da-prod-solr.library.cornell.edu/solr/blacklight/databasesBySubject?indent=true&q=%22Images%20(Core)%22&wt=json
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.8.2.4, ruby 2.3.1 (2016-04-26))
+      - HTTPClient/1.0 (2.8.3, ruby 2.3.1 (2016-04-26))
       Accept:
       - "*/*"
       Date:
-      - Tue, 09 Jan 2018 16:06:36 GMT
+      - Mon, 12 Mar 2018 17:37:34 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 09 Jan 2018 16:06:36 GMT
+      - Mon, 12 Mar 2018 17:37:34 GMT
       Last-Modified:
-      - Tue, 09 Jan 2018 16:06:21 GMT
+      - Mon, 12 Mar 2018 17:37:28 GMT
       Etag:
-      - '"NDU1N2E4MDAwMDAwMDAwMFNvbHI="'
+      - '"OTRiODA0MDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
       - '2676'
       Via:
-      - 1.1 da-prod-solr8.library.cornell.edu
+      - 1.1 da-prod-solr9.library.cornell.edu
       Vary:
       - Accept-Encoding
       Connection:
@@ -1146,7 +1148,7 @@ http_interactions:
           "responseHeader":{
             "zkConnected":true,
             "status":0,
-            "QTime":29,
+            "QTime":30,
             "params":{
               "q":"\"Images (Core)\"",
               "indent":"true",
@@ -1188,5 +1190,5 @@ http_interactions:
                   "Art and Architecture"]}]
           }}
     http_version: 
-  recorded_at: Tue, 09 Jan 2018 16:06:36 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Mon, 12 Mar 2018 17:37:34 GMT
+recorded_with: VCR 4.0.0

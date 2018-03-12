@@ -11,11 +11,12 @@ gem 'activerecord-session_store'
 gem 'protected_attributes'
 
 group :development,:test, :integration do
+  gem 'puma'
   gem 'sqlite3'
 end
 
 group :production,:staging do
-  gem 'mysql'
+#  gem 'mysql'
 end
 
 gem 'savon', '~> 2.11.1'
@@ -65,8 +66,12 @@ group :development, :test do
   gem 'awesome_print'
 end
 
+gem "puma"
+
 group :test do
   gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   # Following two gems are following the setup proposed in the RoR tutorial
   # at http://ruby.railstutorial.org/chapters/static-pages#sec-advanced_setup
   gem 'rb-inotify', :require => false
@@ -78,7 +83,7 @@ group :test do
   gem 'vcr'
   gem 'capybara-email'
   gem 'therubyracer', '~> 0.12.2', :platforms => :ruby
-  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  #gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 gem 'jquery-rails'
@@ -86,7 +91,8 @@ gem 'jquery-ui-rails', '5.0.5'
 gem 'rvm-capistrano'
 gem 'capistrano'
 gem 'capistrano-ext'
-gem 'unicode', :platforms => [:mri_18, :mri_19, :mri_20]
+#gem 'unicode', :platforms => [:mri_18, :mri_19, :mri_20]
+gem 'unicode'
 gem 'devise'
 gem 'devise-guests', '~> 0.3'
 

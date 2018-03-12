@@ -84,11 +84,8 @@ group :test do
   gem 'capybara-email'
   gem 'therubyracer', '~> 0.12.2', :platforms => :ruby
   #gem 'phantomjs', :require => 'phantomjs/poltergeist'
-<<<<<<< HEAD
-=======
   gem "selenium-webdriver"
   gem "chromedriver-helper"
->>>>>>> 56eecf80b35f462c62169e447b5d78e44ccb8853
 end
 
 gem 'jquery-rails'

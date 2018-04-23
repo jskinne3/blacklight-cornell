@@ -95,7 +95,7 @@ gem 'omniauth-saml'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-gem 'blacklight_cornell_requests',:git =>'https://github.com/cul-it/blacklight-cornell-requests', :branch => 'master'
+gem 'blacklight_cornell_requests',:git =>'https://github.com/cul-it/blacklight-cornell-requests', :branch => 'solr-holdings'
 #gem 'blacklight_cornell_requests', :path => '/Users/matt/code/d&a/blacklight-cornell-requests'
 gem 'borrow_direct', :git => 'https://github.com/jrochkind/borrow_direct'
 

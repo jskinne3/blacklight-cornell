@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/cul-it/blacklight-cornell-requests
-  revision: bbe7511110d09ac7abc7a534d4eef3eccaf0ca6d
+  revision: 87bb4a2dcb436a46d7cd14d3edeaeadb1818f535
   branch: solr-holdings
   specs:
-    blacklight_cornell_requests (1.5.4)
+    blacklight_cornell_requests (2.0)
       activerecord-oracle_enhanced-adapter
       blacklight (>= 5.9)
       borrow_direct
@@ -236,10 +236,10 @@ GEM
       devise
     diff-lcs (1.3)
     dot-properties (0.1.3)
-    dotenv (2.3.0)
+    dotenv (2.4.0)
     dotenv-deployment (0.0.2)
-    dotenv-rails (2.3.0)
-      dotenv (= 2.3.0)
+    dotenv-rails (2.4.0)
+      dotenv (= 2.4.0)
       railties (>= 3.2, < 6.0)
     erubis (2.7.0)
     et-orbi (1.0.9)
@@ -390,7 +390,7 @@ GEM
       byebug (~> 10.0)
       pry (~> 0.10)
     public_suffix (3.0.2)
-    rack (1.6.9)
+    rack (1.6.10)
     rack-contrib (1.8.0)
       rack (~> 1.4)
     rack-test (0.6.3)

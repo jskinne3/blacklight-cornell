@@ -90,6 +90,33 @@ module BlacklightCornell
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # -> Exception Handler
+    config.exception_handler = {
+      dev:    nil, # => defaults to "false" for dev mode
+      db:     nil, # => defaults to :errors if true, else use "table_name" / :table_name
+      email:    nil, # => requires string email and ActionMailer
+      social: {
+          facebook: nil,
+          twitter:  nil,
+          youtube:  nil,
+          linkedin: nil,
+          fusion:   nil,
+      },
+      layouts: {
+          # => nil inherits from ApplicationController
+          # => 4xx errors should be nil
+          # => 5xx errors should be "exception" but can be nil if explicitly defined
+          500 => "exception",
+          501 => "exception",
+          502 => "exception",
+          503 => "exception",
+          504 => "exception",
+          505 => "exception",
+          507 => "exception",
+          510 => "exception"
+      }
+    }
   end
 end
 if true 

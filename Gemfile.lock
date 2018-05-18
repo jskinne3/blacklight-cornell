@@ -241,6 +241,10 @@ GEM
     erubis (2.7.0)
     et-orbi (1.1.1)
       tzinfo
+    exception_handler (0.7.7.0)
+      bundler
+      rails (>= 4.2.0)
+      responders
     exception_notification (4.2.2)
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
@@ -612,6 +616,7 @@ DEPENDENCIES
   devise-guests (~> 0.3)
   dotenv-deployment
   dotenv-rails
+  exception_handler
   exception_notification
   font-awesome-rails
   guard-rspec

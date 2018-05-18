@@ -109,6 +109,7 @@ gem 'bento_search'
 gem 'celluloid'  # Required for bento_search multisearcher
 gem 'mollom'
 gem 'exception_notification'
+gem 'exception_handler'
 gem 'piwik_analytics', '~> 1.0.1'
 gem 'citeproc'
 gem 'csl-styles', :git => 'https://github.com/cul-it/csl-styles', :branch => 'master', :submodules => true

@@ -93,7 +93,7 @@ module BlacklightCornell
 
     # -> Exception Handler
     config.exception_handler = {
-      dev:    nil, # => defaults to "false" for dev mode
+      dev:    true, # => defaults to "false" for dev mode
       db:     nil, # => defaults to :errors if true, else use "table_name" / :table_name
       email:    nil, # => requires string email and ActionMailer
       social: {

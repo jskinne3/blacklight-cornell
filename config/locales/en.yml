@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  exception_handler:
+    not_found: "File not found"
+    unauthorized: "You need to sign in to continue"
+    internal_server_error: "This is a test to show the %{status} of the error - %{message}"

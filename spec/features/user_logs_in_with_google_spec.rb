@@ -5,8 +5,8 @@ RSpec.feature "user logs in" do
     stub_omniauth
     visit 'logins' 
     if ENV['GOOGLE_CLIENT_ID']
-      expect(page).to have_link("Sign in with your google id")
-      click_link "Sign in with your google id"
+      expect(page).to have_link((I18n.t 'blacklight.authentication.provider_prompt',kind: 'Google'))
+      click_link (I18n.t('blacklight.authentication.provider_prompt',kind: 'Google'))
       #expect(page).to have_link("Sign out")
       #expect(page).to have_link("Book Bag")
       expect(page).to have_content("You are logged in as Diligent Tester.")
@@ -17,13 +17,13 @@ RSpec.feature "user logs in" do
 
   scenario "using google oauth2 from search history page" do
     if ENV['GOOGLE_CLIENT_ID']
-    stub_omniauth
-    visit 'search_history' 
-    click_link "Sign in"
-    expect(page).to have_link("Sign in with your google id")
-    click_link "Sign in with your google id"
-    expect(page).to have_content("You are logged in as Diligent Tester.")
-    expect(page).to have_content("Search History")
+      stub_omniauth
+      visit 'search_history' 
+      click_link "Sign in"
+      expect(page).to have_link((I18n.t 'blacklight.authentication.provider_prompt',kind: 'Google'))
+      click_link (I18n.t('blacklight.authentication.provider_prompt',kind: 'Google'))
+      expect(page).to have_content("You are logged in as Diligent Tester.")
+      expect(page).to have_content("Search History")
     end
   end
 

@@ -254,6 +254,8 @@ en:
         present: "Selected"
         absent: "Select"
         inprogress: "Saving..."
+    authentication:
+      provider_prompt: 'Sign in with your %{kind} account.'
 
     entry_name:
       default: 'entry'

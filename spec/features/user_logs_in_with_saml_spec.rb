@@ -9,8 +9,11 @@ RSpec.feature "user logs in" do
     stub_samlauth
     visit 'logins' 
     if ENV['SAML_IDP_TARGET_URL']
-      expect(page).to have_link("Sign in with your netid")
-      click_link "Sign in with your netid"
+      print page.html
+      expect(page).to have_link((I18n.t 'blacklight.authentication.provider_prompt',kind: 'netid'))
+      #expect(page).to have_link("Sign in with your netid")
+      #click_link "Sign in with your netid"
+      click_link (I18n.t('blacklight.authentication.provider_prompt',kind: 'netid'))
       expect(page).to have_content("Sign out")
     else
       expect(page).to_not have_link("Sign in with your netid")

@@ -16,11 +16,12 @@ RSpec.feature "user logs in" do
   end
 
   scenario "using google oauth2 from search history page" do
-    if ENV['GOOGLE_CLIENT_ID']
     stub_omniauth
     visit 'search_history' 
+    print page.html
     click_link "Sign in"
     expect(page).to have_link("Sign in with your google id")
+    if ENV['GOOGLE_CLIENT_ID']
     click_link "Sign in with your google id"
     expect(page).to have_content("You are logged in as Diligent Tester.")
     expect(page).to have_content("Search History")

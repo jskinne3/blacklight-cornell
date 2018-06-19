@@ -5,6 +5,7 @@ module BlacklightCornell::CornellCatalog extend Blacklight::Catalog
   include Blacklight::Configurable
 #  include Blacklight::SolrHelper
   include CornellCatalogHelper
+  include CornellHoldingsHelper
   include Blacklight::SearchHelper
   include ActionView::Helpers::NumberHelper
   include CornellParamsHelper
@@ -233,6 +234,10 @@ Blacklight::Catalog::SearchHistoryWindow = 12 # how many searches to save in ses
   def show
     @response, @document = fetch params[:id]
     @documents = [ @document ]
+    # just to debug this method.
+    holdings_text = holdings_as_text(@document)
+    logger.info "es287_debug #{__FILE__}:#{__LINE__}:#{__method__} holdings_text = #{holdings_text.inspect}"
+    # end of debugging holdings_text
     set_bag_name 
     logger.info "es287_debug #{__FILE__}:#{__LINE__}:#{__method__} params = #{params.inspect}"
     respond_to do |format|

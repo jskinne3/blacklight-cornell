@@ -261,19 +261,19 @@ Feature: Select and export items from the result set
 #@all_select_and_export
 #@DISCOVERYACCESS-1633
 #@select_and_email
-#@javascript
-#  Scenario: User sends a record by email
-#    Given PENDING 
-#    Given I request the item view for 8767648
-#    And click on link "Email"
-#    And I fill in "to" with "quentin@example.com"
-#    And I sleep 2 seconds
-#    And I press "Send"
-#    And I sleep 2 seconds
-#    Then "quentin@example.com" receives an email with "Marvel masterworks" in the content 
-#    Then I should see "Marvel masterworks" in the email body
-#    Then I should see "Lee, Stan" in the email body
-  #  Then I should see "Status: v.1   c. 1 Checked out, due 2017-09-29" in the email body
+@javascript
+  Scenario: User sends a record by email
+    Given I request the item view for 8767648
+    And click on link "Email"
+    And I fill in "to" with "quentin@example.com"
+    And I sleep 2 seconds
+    And I press "Send"
+    And I sleep 2 seconds
+    Then "quentin@example.com" receives an email with "Marvel masterworks" in the content 
+    Then I should see "Marvel masterworks" in the email body
+    Then I should see "Lee, Stan" in the email body
+    Then I should see "Unavailable 05/28/18" in the email body
+
 
 #    Given PENDING 
 #search for marvel masterworks, and get two results, select, and email them

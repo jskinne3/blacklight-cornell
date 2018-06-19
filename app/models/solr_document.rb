@@ -17,6 +17,7 @@ class SolrDocument
                          )
 
 
+  include CornellHoldingsHelper
 
   # self.unique_key = 'id'
 

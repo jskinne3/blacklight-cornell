@@ -29,8 +29,11 @@ class CatalogController < ApplicationController
   def repository_class
     Blacklight::Solr::Repository
   end
+# Disable the login requirement for email during testing
+  if !ENV['RAILS_ENV'] == 'test'
   unless  ENV['SAML_IDP_TARGET_URL']
     before_action :authorize_email_use!, only: :email
+  end
   end
 
   # This is used to protect the email function by limiting it to only Cornell

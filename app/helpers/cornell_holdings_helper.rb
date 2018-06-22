@@ -2,6 +2,7 @@ module CornellHoldingsHelper
 
   def holdings_as_text(document)
     holdings_text = ''
+    holdings_text += online_display(document)
     circulating_items,online_items,rare_items = group_holdings(document)
     if !circulating_items.blank?
       items = circulating_items.sort_by { |e| e["location"]["name"]  }
@@ -215,7 +216,23 @@ def solr_status(i,noncirc,pda)
   end
   result
 end
-
+  def online_display(document)
+    Rails.logger.info "es287_debug #{__FILE__}:#{__LINE__}:#{__method__} document = #{document.inspect}"
+    result = ''
+    if document['url_access_json'].present?
+      result += "\nOnline\n"
+      document['url_access_json'].each do |link|
+        Rails.logger.info "es287_debug #{__FILE__}:#{__LINE__}:#{__method__} link = #{link.inspect}"
+        l = JSON.parse(link)
+        if l['description'].present?
+          label = l['description']
+          result += "#{label}: "
+        end
+        result += " #{l['url']}"
+       end
+    end
+    result
+  end
 
 
 end ### end of module

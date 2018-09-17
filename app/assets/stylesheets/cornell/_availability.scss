@@ -55,6 +55,12 @@ h3.rare {
 		color: white;
 	}
 }
+.label-unavailable {
+	background: $blue;
+	margin-right: .5em;
+	font-size: 90%;
+	font-weight: normal
+}
 .holding,
 .holdings-error {
 	margin-bottom: 1em;

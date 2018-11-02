@@ -1,0 +1,39 @@
+<% unless params[:q].nil? %>
+  <div class="row">
+    <div class="col-sm-12">
+      <p class="back-to-search">
+        <%= link_to url_for(search_index_path(:q => params[:q], :field => params[:field])) do %>
+          <i class="fa fa-arrow-circle-left"></i>
+          Back to search
+        <% end %>
+      </p>
+    </div>
+  </div>
+<% end %>
+<div class="row">
+  <div class="col-sm-12">
+    <h2>Digital Collections results</h2>
+    <%#= @query %>
+    <!-- <form class="well" id="search" method="get">
+      <label class="hide-text" for="q">
+        Search
+      </label>
+      <input class="search-query">(type='text' name='q' id='q' value='#{params[:q]}' placeholder='Search library websites' autocapitalize='off')</input>
+      <input class="btn hidden-phone btn-inverse">(type='submit' name='submit' value='Search')</input>
+      <button class="btn mobile-search-btn visible-phone btn-inverse" id="search-btn">(type="submit")
+        <i class="fa fa-search icon-white"></i>
+      </button>
+    </form> -->
+  </div>
+</div>
+<% if @results %>
+  <%= render 'single_search/pagination' %>
+  <div class="<%= @results.engine_id %> row">
+    <div class="col-sm-12">
+      <%= bento_search @results %>
+    </div>
+  </div>
+  <%= render 'single_search/pagination' %>
+<% end %>
+
+

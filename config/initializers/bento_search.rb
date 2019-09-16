@@ -128,13 +128,13 @@ BentoSearch.register_engine('solr') do |conf|
 	if SOLR_CONFIG[ENV['RAILS_ENV']].present? && SOLR_CONFIG[ENV['RAILS_ENV']]["url"].present?
 		conf.solr_url = SOLR_CONFIG[ENV['RAILS_ENV']]["url"]
 	else
-		env = ENV['RAILS_ENV'];
-		print env
-		solr = ENV['SOLR_URL'];
-		print solr
-		msg = "jgr25 - no solr config for " + env + " solr " + solr
-		print msg
-		raise msg
+		if ENV['RAILS_ENV'].blank?
+			raise 'no RAILS_ENV'
+		end
+		if ENV['SOLR_URL'].blank?
+			raise 'no SOLR_URL'
+		end
+		raise 'jgr25 error'
 	end
 end
 
